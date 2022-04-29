@@ -13,7 +13,7 @@ const ExecuteList = () => {
     <Docs title="Create Lists">
       <HeaderText>Execute Lists 🛠</HeaderText>
       <p className="mt-4 text-sm px-1 text-slate-600">
-        Hit-List allows you to run multiple custom commands in a single hit.
+        Hit-List allows you to run multiple custom commands with a single hit.
         This section provides information on how to run your own lists and other
         lists in the pool from other users.
       </p>
@@ -22,8 +22,9 @@ const ExecuteList = () => {
       <Description>
         By default, all lists are set to public which means anyone with your
         username and the list name can use the list. This is especially useful
-        if you work with a run and you run multiple commands to run your
-        project. Running ia public list is very easy and here is how to do it.
+        if you work with a team and you run multiple commands on a day-to-day
+        basis while working on your project. Running a public list is very easy
+        and here is how to do it.
       </Description>
       <Command mt={4}>hit run -p [USERNAME] [LIST NAME]</Command>
       <Text mt={2} fontSize="sm" textAlign="center">

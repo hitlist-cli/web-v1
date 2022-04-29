@@ -6,7 +6,7 @@ import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
 const PageButton = ({ page, next, children, mt }) => {
   const router = useRouter();
   return (
-    <div className="hover:scale-95 transition-all">
+    <div className="hover:scale-95 transition-all cursor-pointer">
       <Box
         w="100%"
         bgColor="none"

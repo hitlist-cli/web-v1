@@ -17,7 +17,7 @@ const Extras = () => {
         often with newer hits as more features are added.
       </p>
       <SubHeader mt={4}>Clearing the terminal</SubHeader>
-      <Description>Clear all console output using Hit-List CLI</Description>
+      <Description>Clear all terminal output using Hit-List CLI</Description>
       <Command mt={2}>hit c</Command>
 
       <SubHeader mt={8}>Pushing to Git</SubHeader>
@@ -50,10 +50,21 @@ const Extras = () => {
       <Description>To display all commands</Description>
       <Command mt={2}>hit</Command>
 
-      <p className="my-8 text-[13px] text-slate-600 px-1">
+      <p className="my-8 text-[13px] text-slate-700 px-1">
         ❤️ If you need any more help, contact us at{" "}
-        <span className="text-[13px] text-slate-400">hit@hitlist.dev</span>
+        <span className="text-[13px] text-slate-500">hit@hitlist.dev</span> or
+        on Twitter at{" "}
+        <a
+          className=" hover:scale-95 transition-all text-sky-500 inline"
+          href="https://twitter.com/hitlistcli"
+        >
+          @hitlistcli
+        </a>
       </p>
+
+      <PageButton next={false} page="delete-list" mt={8}>
+        Delete Lists ❌
+      </PageButton>
     </Docs>
   );
 };

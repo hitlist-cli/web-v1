@@ -625,6 +625,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 2.5rem;
 }
 
+.mb-\[2vh\]{
+  margin-bottom: 2vh;
+}
+
+.mb-\[5vh\]{
+  margin-bottom: 5vh;
+}
+
+.mb-\[4vh\]{
+  margin-bottom: 4vh;
+}
+
+.inline{
+  display: inline;
+}
+
 .flex{
   display: flex;
 }
@@ -958,6 +974,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:text-\[13px\]{
+    font-size: 13px;
   }
 }
 

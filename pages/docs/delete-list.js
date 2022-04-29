@@ -14,7 +14,8 @@ const DeleteLists = () => {
       <HeaderText>Delete Lists ❌</HeaderText>
       <p className="mt-4 text-sm px-1 text-slate-600">
         This section contains details on how to delete public lists. Just
-        kidding, you can&apos;t because you don&apos;t own it 🤣 <br />
+        kidding, you can&apos;t if you don&apos;t own it or have access to the
+        account 🤣 <br />
         But, you can delete your own lists (or edit them, this is only possible
         in the web UI for now), you can delete any of your own lists by running
         any of the commands below in the terminal and confirming the prompt.

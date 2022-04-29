@@ -13,9 +13,9 @@ const CreateList = () => {
     <Docs title="Create Lists">
       <HeaderText>Create Lists ➕</HeaderText>
       <p className="mt-4 text-sm px-1 text-slate-600">
-        Well done so far Jimmy Neutron 👏, let&apos;s take a look at how to
-        create a List. A List or Hit List is simply a collection of commands
-        specified by YOU.
+        Well done so far Jimmy Neutron 👏 <br /> Let&apos;s take a look at how
+        to create a List. A List or Hit List is simply a collection of commands
+        specified by the owner.
       </p>
       <SubHeader>Creating Your First List</SubHeader>
       <Description>
@@ -26,7 +26,7 @@ const CreateList = () => {
       <Command mt={3}>hit me</Command>
       <Box mt={6}>
         <Description>
-          Now that you have confirmed that it is indeed you logged in, you can
+          Now that you have confirmed that you are indeed logged in, you can
           continue to run the command below.
         </Description>
       </Box>
@@ -37,10 +37,10 @@ const CreateList = () => {
         details:
       </p>
       <Info mt={4}>
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           <li>
-            Hits separated by commas (eg. &quot;mkdir test-folder, cd
-            test-folder&quot;)
+            Hits separated by commas (eg. mkdir my-project, cd my-project, npm
+            start)
           </li>
           <li>Description of the list (eg. This is my test list)</li>
           <li>
@@ -57,7 +57,7 @@ const CreateList = () => {
       <PageButton next={true} page="execute-list">
         Execute Lists 🛠
       </PageButton>
-      <PageButton next={false} page="create-list" mt="5">
+      <PageButton next={false} page="authentication" mt="5">
         Authentication 🔐
       </PageButton>
     </Docs>
