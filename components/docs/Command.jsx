@@ -38,6 +38,7 @@ const Command = ({ children, mt }) => {
         </Box>
       </Flex>
     </Box>
+    // <span className="text-slate-400 font-normal">$</span>
   );
 };
 

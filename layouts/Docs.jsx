@@ -38,7 +38,7 @@ const Docs = ({ children, title }) => {
     <>
       <Meta
         title={title ? title : "Docs - HitList CLI"}
-        desc="Start using HitList CLI to maximize efficiency while using the terminal like a pro!"
+        desc="All you need you need to know to start using Hit-List CLI like a PRO!"
       />
       <div className="lg:relative fixed top-0 z-[99] w-[100%]">
         <Box
@@ -127,6 +127,9 @@ const Docs = ({ children, title }) => {
                     Bidemi
                   </a>
                 </p>
+                <p className="mt-4 text-[10px] text-slate-400">
+                  Send feedback and reports to contact@hitlist.dev ❤️
+                </p>
               </footer>
             </div>
           </div>
@@ -170,6 +173,9 @@ const Docs = ({ children, title }) => {
                   >
                     Bidemi
                   </a>
+                </p>
+                <p className="text-[10px] text-slate-500">
+                  Contact@hitlist.dev
                 </p>
               </Stack>
             </Box>

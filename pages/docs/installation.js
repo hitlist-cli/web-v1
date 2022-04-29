@@ -21,8 +21,8 @@ const Installation = () => {
       <Info mt="2">
         <ul className="space-y-3">
           <li>Node.js &gt;= v16.0.0</li>
-          <li>Node Package Manager (NPM) &gt;= v6.0.0</li>
-          <li>Internet Connection</li>
+          <li>NPM &gt;= v6.0.0</li>
+          <li>An Internet Connection</li>
         </ul>
       </Info>
 
