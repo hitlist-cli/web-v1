@@ -603,6 +603,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-y: scroll;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -660,6 +664,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-primary{
   --tw-text-opacity: 1;
   color: rgb(0 124 213 / var(--tw-text-opacity));
+}
+
+.text-neutral-500{
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+.text-neutral-300{
+  --tw-text-opacity: 1;
+  color: rgb(212 212 212 / var(--tw-text-opacity));
+}
+
+.text-neutral-800{
+  --tw-text-opacity: 1;
+  color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.text-neutral-700{
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
 .transition-all{
