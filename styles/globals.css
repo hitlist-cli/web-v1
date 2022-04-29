@@ -559,6 +559,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 10vh;
 }
 
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -627,6 +632,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -637,6 +654,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-y-scroll{
@@ -670,6 +693,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-\[3vw\]{
   padding-left: 3vw;
   padding-right: 3vw;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
 }
 
 .text-center{
@@ -729,6 +771,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 400;
 }
 
+.leading-normal{
+  line-height: 1.5;
+}
+
+.leading-relaxed{
+  line-height: 1.625;
+}
+
+.leading-8{
+  line-height: 2rem;
+}
+
+.leading-6{
+  line-height: 1.5rem;
+}
+
+.leading-5{
+  line-height: 1.25rem;
+}
+
 .text-slate-600{
   --tw-text-opacity: 1;
   color: rgb(71 85 105 / var(--tw-text-opacity));
@@ -777,6 +839,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.outline{
+  outline-style: solid;
 }
 
 .transition-all{

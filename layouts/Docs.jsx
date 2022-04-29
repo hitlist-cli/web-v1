@@ -74,62 +74,92 @@ const Docs = ({ children, title }) => {
               w="100%"
               minH="100vh"
               paddingY="3rem"
-              paddingX={6}
               borderRight="1px"
               borderRightColor="#e9e9e9"
             >
-              <Stack spacing={3}>
-                <Link href="/docs" passHref>
-                  <div className={Page("docs")}>Getting Started</div>
-                </Link>
-                <Link href="/docs/installation" passHref>
-                  <div className={Page("docs/installation")}>Installation</div>
-                </Link>
-                <Link href="/docs/authentication" passHref>
-                  <div className={Page("docs/authentication")}>
-                    Authentication
-                  </div>
-                </Link>
-                <Link href="/docs/create-list" passHref>
-                  <div className={Page("docs/create-list")}>Create Lists</div>
-                </Link>
-                <Link href="/docs/execute-list" passHref>
-                  <div className={Page("docs/execute-list")}>Execute Lists</div>
-                </Link>
-              </Stack>
+              <Flex w="100%" justifyContent="flex-start" px="2.5rem">
+                <Stack spacing={6}>
+                  <Link href="/docs" passHref>
+                    <div className={Page("docs")}>Getting Started</div>
+                  </Link>
+                  <Link href="/docs/installation" passHref>
+                    <div className={Page("docs/installation")}>
+                      Installation
+                    </div>
+                  </Link>
+                  <Link href="/docs/authentication" passHref>
+                    <div className={Page("docs/authentication")}>
+                      Authentication
+                    </div>
+                  </Link>
+                  <Link href="/docs/create-list" passHref>
+                    <div className={Page("docs/create-list")}>Create Lists</div>
+                  </Link>
+                  <Link href="/docs/execute-list" passHref>
+                    <div className={Page("docs/execute-list")}>
+                      Execute Lists
+                    </div>
+                  </Link>
+                  <Link href="/docs/view-list" passHref>
+                    <div className={Page("docs/view-list")}>View Lists</div>
+                  </Link>
+                  <Link href="/docs/delete-list" passHref>
+                    <div className={Page("docs/delete-list")}>Delete Lists</div>
+                  </Link>
+                  <Link href="/docs/extras" passHref>
+                    <div className={Page("docs/extras")}>Extras</div>
+                  </Link>
+                </Stack>
+              </Flex>
             </Box>
           </div>
 
           <div className="lg:col-span-8 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-5/6 mx-auto py-10 px-[3vw] mb-[10vh]">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-5/6 mx-auto pt-8 px-[3vw] mb-[10vh]">
+              <Box
+                bgColor="green.50"
+                border="1px"
+                borderColor="green.300"
+                textColor="green.400"
+                fontSize={13}
+                borderRadius={15}
+                py={4}
+                px={5}
+                mb={8}
+              >
+                Offline support will be added in the next release 🎉
+              </Box>
+
               {children}
 
               <footer className="lg:hidden text-center text-xs text-slate-500 my-[10vh]">
-                <p>
-                  🛠 Built by{" "}
-                  <a
-                    className="underline text-slate-700"
-                    href="https://twitter.com/trulyao"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ayodeji
-                  </a>
+                <p className="my-4 text-[10px] text-slate-400">
+                  Send feedback and reports to contact@hitlist.dev
                 </p>
-                <p className="mt-4">
-                  🎨 Designed by{" "}
-                  <a
-                    className="underline text-slate-700"
-                    href="https://twitter.com/AbdurrazzaqAbd9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Bidemi
-                  </a>
-                </p>
-                <p className="mt-4 text-[10px] text-slate-400">
-                  Send feedback and reports to contact@hitlist.dev ❤️
-                </p>
+                <div className="flex justify-evenly items-center px-2">
+                  <p>
+                    🛠 Built by{" "}
+                    <a
+                      className="underline text-slate-700"
+                      href="https://twitter.com/trulyao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ayodeji
+                    </a>
+                  </p>
+                  <p className="">
+                    🎨 Designed by{" "}
+                    <a
+                      className="underline text-slate-700"
+                      href="https://twitter.com/AbdurrazzaqAbd9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bidemi
+                    </a>
+                  </p>
+                </div>
               </footer>
             </div>
           </div>
@@ -140,44 +170,45 @@ const Docs = ({ children, title }) => {
               w="100%"
               minH="100vh"
               paddingY="3rem"
-              paddingX={12}
               borderLeft="1px"
               borderLeftColor="#e9e9e9"
             >
-              <Stack spacing={5}>
-                <a
-                  className="flex items-center space-x-2 hover:scale-95 transition-all text-sky-500"
-                  href="https://twitter.com/hitlistcli"
-                >
-                  <FaTwitter /> <div>Twitter</div>
-                </a>
+              <Flex w="100%" justifyContent="center">
+                <Stack spacing={5}>
+                  <a
+                    className="flex items-center space-x-2 hover:scale-95 transition-all text-sky-500"
+                    href="https://twitter.com/hitlistcli"
+                  >
+                    <FaTwitter /> <div>Twitter</div>
+                  </a>
 
-                <p className="text-xs text-slate-500">
-                  🛠 Built by{" "}
-                  <a
-                    className="underline text-slate-700"
-                    href="https://twitter.com/trulyao"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Ayodeji
-                  </a>
-                </p>
-                <p className="mt-4 text-slate-500 text-xs">
-                  🎨 Designed by{" "}
-                  <a
-                    className="underline text-slate-700"
-                    href="https://twitter.com/AbdurrazzaqAbd9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Bidemi
-                  </a>
-                </p>
-                <p className="text-[10px] text-slate-500">
-                  Contact@hitlist.dev
-                </p>
-              </Stack>
+                  <p className="text-xs text-slate-500">
+                    🛠 Built by{" "}
+                    <a
+                      className="underline text-slate-700"
+                      href="https://twitter.com/trulyao"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ayodeji
+                    </a>
+                  </p>
+                  <p className="mt-4 text-slate-500 text-xs">
+                    🎨 Designed by{" "}
+                    <a
+                      className="underline text-slate-700"
+                      href="https://twitter.com/AbdurrazzaqAbd9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bidemi
+                    </a>
+                  </p>
+                  <p className="text-[10px] text-slate-500">
+                    Contact@hitlist.dev
+                  </p>
+                </Stack>
+              </Flex>
             </Box>
           </div>
         </div>
@@ -212,6 +243,15 @@ const Docs = ({ children, title }) => {
             </Link>
             <Link href="/docs/execute-list" passHref>
               <div className={Page("docs/execute-list")}>Execute Lists</div>
+            </Link>
+            <Link href="/docs/view-list" passHref>
+              <div className={Page("docs/view-list")}>View Lists</div>
+            </Link>
+            <Link href="/docs/delete-list" passHref>
+              <div className={Page("docs/delete-list")}>Delete Lists</div>
+            </Link>
+            <Link href="/docs/extras" passHref>
+              <div className={Page("docs/extras")}>Extras</div>
             </Link>
           </Stack>
         </DrawerContent>
