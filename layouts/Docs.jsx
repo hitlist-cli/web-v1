@@ -68,7 +68,7 @@ const Docs = ({ children, title }) => {
         </Box>
       </div>
       <Sticky>
-        <div className="lg:grid lg:grid-cols-12">
+        <div className="lg:grid lg:grid-cols-12 2xl:w-5/6 2xl:mx-auto">
           <div className="hidden lg:block bg-white h-screen col-span-2">
             <Box
               w="100%"
@@ -101,7 +101,7 @@ const Docs = ({ children, title }) => {
           </div>
 
           <div className="lg:col-span-8 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-4/6 mx-auto py-10 px-[3vw] mb-[10vh]">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-5/6 mx-auto py-10 px-[3vw] mb-[10vh]">
               {children}
 
               <footer className="lg:hidden text-center text-xs text-slate-500 my-[10vh]">

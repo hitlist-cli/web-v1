@@ -838,4 +838,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   .\32xl\:w-4\/6{
     width: 66.666667%;
   }
+
+  .\32xl\:w-5\/6{
+    width: 83.333333%;
+  }
 }
