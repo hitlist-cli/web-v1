@@ -99,8 +99,8 @@ const Docs = ({ children, title }) => {
             </Box>
           </div>
 
-          <div className="lg:col-span-10 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-3/6 mx-auto lg:mx-0 2xl:mx-auto py-10 px-[3vw]">
+          <div className="lg:col-span-8 max-h-screen overflow-y-scroll">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-4/6 mx-auto py-10 px-[3vw]">
               {children}
 
               <footer className="text-center text-xs text-slate-500 my-[10vh]">
@@ -128,6 +128,24 @@ const Docs = ({ children, title }) => {
                 </p>
               </footer>
             </div>
+          </div>
+
+          {/* Third column */}
+          <div className="hidden lg:block bg-white h-screen col-span-2">
+            <Box
+              w="100%"
+              minH="100vh"
+              paddingY="3rem"
+              paddingX={6}
+              borderLeft="1px"
+              borderLeftColor="#e9e9e9"
+            >
+              <Stack spacing={3}>
+                <a className="" href="https://twitter.com">
+                  Twitter
+                </a>
+              </Stack>
+            </Box>
           </div>
         </div>
       </Sticky>

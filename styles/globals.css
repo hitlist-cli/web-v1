@@ -739,6 +739,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 10 / span 10;
   }
 
+  .lg\:col-span-8{
+    grid-column: span 8 / span 8;
+  }
+
   .lg\:mx-0{
     margin-left: 0px;
     margin-right: 0px;
@@ -764,6 +768,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 80%;
   }
 
+  .lg\:w-4\/6{
+    width: 66.666667%;
+  }
+
   .lg\:grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -782,5 +790,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .\32xl\:w-3\/6{
     width: 50%;
+  }
+
+  .\32xl\:w-4\/6{
+    width: 66.666667%;
   }
 }
