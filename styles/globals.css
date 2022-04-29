@@ -547,6 +547,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
+.my-\[10vh\]{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
@@ -597,6 +602,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-h-\[4vh\]{
   max-height: 4vh;
+}
+
+.max-h-screen{
+  max-height: 100vh;
 }
 
 .w-\[90vw\]{
