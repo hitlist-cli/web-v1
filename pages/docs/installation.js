@@ -4,6 +4,9 @@ import { Box, Text } from "@chakra-ui/react";
 import PageButton from "@/components/docs/PageButton";
 import Info from "@/components/docs/Info";
 import HeaderText from "@/components/docs/HeaderText";
+import SubHeader from "@/components/docs/SubHeader";
+import Command from "@/components/docs/Command";
+import Description from "@/components/docs/Description";
 
 const Installation = () => {
   return (
@@ -11,8 +14,7 @@ const Installation = () => {
       <HeaderText>Installation ✨</HeaderText>
 
       <p className="mt-6 text-sm px-1">
-        Let&apos;s take a look at how to get you setup so you can start using
-        Hit List CLI
+        Let&apos;s take a look at how to setup Hit-List CLI and start using it.
       </p>
 
       <h2 className="mt-6 font-semibold px-1">What You Need</h2>
@@ -23,6 +25,25 @@ const Installation = () => {
           <li>Internet Connection</li>
         </ul>
       </Info>
+
+      <SubHeader>Mac/Linux Installation</SubHeader>
+      <Description>
+        Mac and Linux systems require special permissions for global
+        installations. Run any of the commands below to install Hit-List CLI on
+        your machine.
+      </Description>
+      <Command mt={4}>sudo npm i -g hitlist-cli</Command>
+
+      <SubHeader>Windows Installation</SubHeader>
+      <Description>
+        Run the command below to install Hit-List CLI on your Windows machine
+      </Description>
+      <Command mt={4}>npm i -g hitlist-cli</Command>
+
+      <p className="mt-5 text-sm px-1">
+        Now that you&apos;ve got that setup, let&apos;s move on to
+        authentication.{" "}
+      </p>
 
       <PageButton next={true} page="authentication">
         Authentication 🔐

@@ -9,13 +9,15 @@ import HeaderText from "@/components/docs/HeaderText";
 const DocHome = () => {
   return (
     <>
-      <Docs>
+      <Docs title="Getting Started">
         <HeaderText>Getting Started 🚀</HeaderText>
 
-        <p className="text-sm mt-8 text-neutral-800">
-          <span className="text-primary text-medium">Hit List</span> is your
+        <p className="text-sm mt-8 text-neutral-800 px-1">
+          <span className="text-primary text-medium">Hit-List</span> is an
           online commands manager that allows you to take your command lists
-          (i.e Hit Lists) with you anywhere and use them anytime.
+          (i.e Hit Lists) with you anywhere and use them anytime. Hit-List CLI
+          tool is built to help you reduce time spent repeating commands in the
+          terminal; consequently improving your workflow efficiency.
         </p>
 
         <Info>

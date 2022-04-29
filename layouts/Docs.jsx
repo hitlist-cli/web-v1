@@ -35,7 +35,10 @@ const Docs = ({ children, title }) => {
   };
   return (
     <>
-      <Meta title={title ? title : "Docs - HitList CLI"} />
+      <Meta
+        title={title ? title : "Docs - HitList CLI"}
+        desc="Start using HitList CLI to maximize efficiency while using the terminal like a pro!"
+      />
       <div className="lg:relative fixed top-0 z-[99] w-[100%]">
         <Box
           w="100%"
@@ -85,6 +88,12 @@ const Docs = ({ children, title }) => {
                   <div className={Page("docs/authentication")}>
                     Authentication
                   </div>
+                </Link>
+                <Link href="/docs/create-list" passHref>
+                  <div className={Page("docs/create-list")}>Create Lists</div>
+                </Link>
+                <Link href="/docs/execute-list" passHref>
+                  <div className={Page("docs/execute-list")}>Execute Lists</div>
                 </Link>
               </Stack>
             </Box>
@@ -146,6 +155,12 @@ const Docs = ({ children, title }) => {
             </Link>
             <Link href="/docs/authentication" passHref>
               <div className={Page("docs/authentication")}>Authentication</div>
+            </Link>
+            <Link href="/docs/create-list" passHref>
+              <div className={Page("docs/create-list")}>Create Lists</div>
+            </Link>
+            <Link href="/docs/execute-list" passHref>
+              <div className={Page("docs/execute-list")}>Execute Lists</div>
             </Link>
           </Stack>
         </DrawerContent>
