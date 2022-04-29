@@ -12,11 +12,11 @@
 main.Body {
   width: 100%;
   height: 100% !important;
-  background-image: url("../public/images/BG.svg");
-  background-position: top;
-  background-attachment: scroll;
-  background-size: 500%;
-  background-repeat: fixed;
+  background-image: url("../public/images/BG.svg") !important;
+  background-position: top !important;
+  background-attachment: fixed !important;
+  background-size: 400% !important;
+  background-repeat: none !important;
   margin-top: 0 !important;
 }
 
@@ -786,11 +786,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.25rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -840,24 +835,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 15vh;
 }
 
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
 .pb-20{
   padding-bottom: 5rem;
 }
 
 .pb-4{
   padding-bottom: 1rem;
-}
-
-.pt-16{
-  padding-top: 4rem;
-}
-
-.pb-8{
-  padding-bottom: 2rem;
-}
-
-.pb-6{
-  padding-bottom: 1.5rem;
 }
 
 .text-center{

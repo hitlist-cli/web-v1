@@ -11,11 +11,11 @@
 main.Body {
   width: 100%;
   height: 100% !important;
-  background-image: url("../public/images/BG.svg");
-  background-position: top;
-  background-attachment: scroll;
-  background-size: 500%;
-  background-repeat: fixed;
+  background-image: url("../public/images/BG.svg") !important;
+  background-position: top !important;
+  background-attachment: fixed !important;
+  background-size: 400% !important;
+  background-repeat: none !important;
   margin-top: 0 !important;
 }
 ::-webkit-scrollbar {
