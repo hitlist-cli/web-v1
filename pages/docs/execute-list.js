@@ -12,7 +12,7 @@ const ExecuteList = () => {
   return (
     <Docs title="Create Lists">
       <HeaderText>Execute Lists 🛠</HeaderText>
-      <p className="mt-6 text-sm px-1 text-slate-600">
+      <p className="mt-4 text-sm px-1 text-slate-600">
         Hit-List allows you to run multiple custom commands in a single hit.
         This section provides information on how to run your own lists and other
         lists in the pool from other users.

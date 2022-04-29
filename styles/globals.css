@@ -564,6 +564,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -594,6 +599,30 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-\[10vh\]{
   margin-bottom: 10vh;
+}
+
+.mt-\[2vh\]{
+  margin-top: 2vh;
+}
+
+.mt-\[5vh\]{
+  margin-top: 5vh;
+}
+
+.mt-\[4vh\]{
+  margin-top: 4vh;
+}
+
+.mt-\[6vh\]{
+  margin-top: 6vh;
+}
+
+.mt-\[7vh\]{
+  margin-top: 7vh;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .flex{
@@ -751,6 +780,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 10px;
 }
 
+.text-\[12px\]{
+  font-size: 12px;
+}
+
+.text-\[13px\]{
+  font-size: 13px;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -888,6 +925,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:mt-\[4vh\]{
+    margin-top: 4vh;
   }
 
   .lg\:block{

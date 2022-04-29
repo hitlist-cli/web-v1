@@ -12,7 +12,7 @@ const Authentication = () => {
   return (
     <Docs title="Authentication">
       <HeaderText>Authentication 🔐</HeaderText>
-      <p className="mt-6 text-sm px-1 text-slate-600">
+      <p className="mt-4 text-sm px-1 text-slate-600">
         Great work genius! You have Hit-List CLI installed on your machine now
         but you need to sign in or create an account to start using it, it is
         quite easy and fast.

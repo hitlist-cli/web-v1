@@ -13,7 +13,7 @@ const Installation = () => {
     <Docs title="Installation">
       <HeaderText>Installation ✨</HeaderText>
 
-      <p className="mt-6 text-sm px-1 text-slate-600">
+      <p className="mt-4 text-sm px-1 text-slate-600">
         Let&apos;s take a look at how to setup Hit-List CLI and start using it.
       </p>
 

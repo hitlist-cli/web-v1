@@ -2,9 +2,12 @@ import React from "react";
 
 const HeaderText = ({ children }) => {
   return (
-    <h1 className="text-3xl lg:text-6xl font-semibold mt-[8vh] lg:mt-0">
+    <div className="text-3xl lg:text-6xl font-semibold mt-[2vh] lg:mt-[4vh]">
       {children}
-    </h1>
+      <h4 className="text-slate-400 text-[12px] font-medium mt-2 px-1">
+        Last updated 29/04/2022
+      </h4>
+    </div>
   );
 };
 

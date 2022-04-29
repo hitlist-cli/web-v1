@@ -12,7 +12,7 @@ const DocHome = () => {
       <Docs title="Getting Started">
         <HeaderText>Getting Started 🚀</HeaderText>
 
-        <p className="text-sm mt-8 text-slate-600 px-1">
+        <p className="text-sm mt-4 text-slate-600 px-1">
           <span className="text-primary text-medium">Hit-List</span> is an
           online commands manager that allows you to take your command lists
           (i.e Hit Lists) with you anywhere and use them anytime. Hit-List CLI

@@ -49,7 +49,7 @@ const Docs = ({ children, title }) => {
           borderBottom="1px"
           borderBottomColor="#e9e9e9"
         >
-          <Flex>
+          <Flex alignItems="center">
             <img
               src="/images/Header-Black.svg"
               alt="Header"
@@ -64,6 +64,9 @@ const Docs = ({ children, title }) => {
             >
               <RiMenu3Line size={25} />
             </button>
+            <h1 className="text-slate-500 text-sm hidden lg:block font-semibold">
+              v1.0.2
+            </h1>
           </Flex>
         </Box>
       </div>
@@ -115,17 +118,17 @@ const Docs = ({ children, title }) => {
           </div>
 
           <div className="lg:col-span-8 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-5/6 mx-auto pt-8 px-[3vw] mb-[10vh]">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-5/6 mx-auto py-8 px-[3vw] mt-[7vh] lg:mt-0 mb-[10vh]">
               <Box
                 bgColor="green.50"
                 border="1px"
                 borderColor="green.300"
                 textColor="green.400"
-                fontSize={13}
+                fontSize={12}
                 borderRadius={15}
                 py={4}
                 px={5}
-                mb={8}
+                mb={3}
               >
                 Offline support will be added in the next release 🎉
               </Box>
@@ -134,7 +137,7 @@ const Docs = ({ children, title }) => {
 
               <footer className="lg:hidden text-center text-xs text-slate-500 my-[10vh]">
                 <p className="my-4 text-[10px] text-slate-400">
-                  Send feedback and reports to contact@hitlist.dev
+                  Send feedback and reports to hit@hitlist.dev
                 </p>
                 <div className="flex justify-evenly items-center px-2">
                   <p>
@@ -204,9 +207,7 @@ const Docs = ({ children, title }) => {
                       Bidemi
                     </a>
                   </p>
-                  <p className="text-[10px] text-slate-500">
-                    Contact@hitlist.dev
-                  </p>
+                  <p className="text-[10px] text-slate-500">hit@hitlist.dev</p>
                 </Stack>
               </Flex>
             </Box>

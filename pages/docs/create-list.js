@@ -12,7 +12,7 @@ const CreateList = () => {
   return (
     <Docs title="Create Lists">
       <HeaderText>Create Lists ➕</HeaderText>
-      <p className="mt-6 text-sm px-1 text-slate-600">
+      <p className="mt-4 text-sm px-1 text-slate-600">
         Well done so far Jimmy Neutron 👏, let&apos;s take a look at how to
         create a List. A List or Hit List is simply a collection of commands
         specified by YOU.
