@@ -100,7 +100,7 @@ const Docs = ({ children, title }) => {
           </div>
 
           <div className="lg:col-span-10 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-3/6 mx-auto lg:mx-0 py-10 px-[3vw]">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-3/6 mx-auto lg:mx-0 2xl:mx-auto py-10 px-[3vw]">
               {children}
 
               <footer className="text-center text-xs text-slate-500 my-[10vh]">

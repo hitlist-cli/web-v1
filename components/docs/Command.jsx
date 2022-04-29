@@ -20,7 +20,7 @@ const Command = ({ children, mt }) => {
     <Box
       w="100%"
       bgColor="gray.100"
-      py="1rem"
+      py="1.2rem"
       px="2rem"
       borderRadius={10}
       mt={mt ? mt : 10}

@@ -12,7 +12,16 @@
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+::-webkit-scrollbar-thumb:hover {
   background-color: #007cd5;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @tailwind base;
