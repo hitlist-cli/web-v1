@@ -6,6 +6,17 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-synthesis: none;
+  -webkit-appearance: none;
+}
+main.Body {
+  width: 100vw;
+  height: 100% !important;
+  background-image: url("../public/images/BG.svg");
+  background-position: top;
+  background-attachment: scroll;
+  background-size: 500%;
+  background-repeat: fixed;
+  margin-top: 0 !important;
 }
 ::-webkit-scrollbar {
   width: 0.2rem;
