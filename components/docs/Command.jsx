@@ -28,7 +28,7 @@ const Command = ({ children, mt }) => {
       fontWeight="normal"
       textColor="gray.600"
     >
-      <Flex flexDirection={next ? "row" : "row-reverse"}>
+      <Flex>
         <Box fontFamily="mono" fontSize="sm">
           {children}
         </Box>

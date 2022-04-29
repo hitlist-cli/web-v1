@@ -30,7 +30,7 @@ const DocHome = () => {
           </Text>
         </Info>
 
-        <Info>
+        <Info mt={5}>
           <Text fontSize="xs">
             Scenario 2 : You are a very cautious coder and you commit your work
             very often, but again you have to run 3/4 git commands; tsk, very
