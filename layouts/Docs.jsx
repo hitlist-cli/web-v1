@@ -18,6 +18,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiMenu3Line } from "react-icons/ri";
+import { FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 const Docs = ({ children, title }) => {
@@ -100,10 +101,10 @@ const Docs = ({ children, title }) => {
           </div>
 
           <div className="lg:col-span-8 max-h-screen overflow-y-scroll">
-            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-4/6 mx-auto py-10 px-[3vw]">
+            <div className="container w-[95vw] md:w-[80%] lg:w-4/5 2xl:w-4/6 mx-auto py-10 px-[3vw] mb-[10vh]">
               {children}
 
-              <footer className="text-center text-xs text-slate-500 my-[10vh]">
+              <footer className="lg:hidden text-center text-xs text-slate-500 my-[10vh]">
                 <p>
                   🛠 Built by{" "}
                   <a
@@ -136,14 +137,40 @@ const Docs = ({ children, title }) => {
               w="100%"
               minH="100vh"
               paddingY="3rem"
-              paddingX={6}
+              paddingX={12}
               borderLeft="1px"
               borderLeftColor="#e9e9e9"
             >
-              <Stack spacing={3}>
-                <a className="" href="https://twitter.com">
-                  Twitter
+              <Stack spacing={5}>
+                <a
+                  className="flex items-center space-x-2 hover:scale-95 transition-all text-sky-500"
+                  href="https://twitter.com/hitlistcli"
+                >
+                  <FaTwitter /> <div>Twitter</div>
                 </a>
+
+                <p className="text-xs text-slate-500">
+                  🛠 Built by{" "}
+                  <a
+                    className="underline text-slate-700"
+                    href="https://twitter.com/trulyao"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ayodeji
+                  </a>
+                </p>
+                <p className="mt-4 text-slate-500 text-xs">
+                  🎨 Designed by{" "}
+                  <a
+                    className="underline text-slate-700"
+                    href="https://twitter.com/AbdurrazzaqAbd9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Bidemi
+                  </a>
+                </p>
               </Stack>
             </Box>
           </div>
