@@ -10,7 +10,7 @@
 }
 
 main.Body {
-  width: 100vw;
+  width: 100%;
   height: 100% !important;
   background-image: url("../public/images/BG.svg");
   background-position: top;
@@ -653,8 +653,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 100vh;
 }
 
-.w-screen{
-  width: 100vw;
+.w-full{
+  width: 100%;
 }
 
 .w-\[95\%\]{
@@ -663,10 +663,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-\[90\%\]{
   width: 90%;
-}
-
-.w-full{
-  width: 100%;
 }
 
 .w-2{
@@ -850,6 +846,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pb-4{
   padding-bottom: 1rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
+}
+
+.pb-8{
+  padding-bottom: 2rem;
+}
+
+.pb-6{
+  padding-bottom: 1.5rem;
 }
 
 .text-center{
@@ -1058,16 +1066,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 80%;
   }
 
+  .lg\:w-3\/5{
+    width: 60%;
+  }
+
   .lg\:w-full{
     width: 100%;
   }
 
   .lg\:w-3{
     width: 0.75rem;
-  }
-
-  .lg\:w-3\/5{
-    width: 60%;
   }
 
   .lg\:grid-cols-12{
@@ -1084,28 +1092,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-x-5 > :not([hidden]) ~ :not([hidden]){
+  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
-    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-x-2 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
     margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(2rem * var(--tw-space-x-reverse));
-    margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .lg\:space-x-6 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:py-5{

@@ -45,7 +45,7 @@ const Home = () => {
   return (
     <main className="Body">
       <Meta title="Hit-List CLI" />
-      <nav className="w-screen bg-white fixed top-0 py-4 lg:py-5 px-5 lg:px-7 drop-shadow-md">
+      <nav className="w-full bg-white fixed top-0 py-4 lg:py-5 px-5 lg:px-7 drop-shadow-md">
         <img
           src="/images/Header-Black.svg"
           alt="Header"
@@ -64,7 +64,7 @@ const Home = () => {
         </h4>
 
         {/* DOCS BUTTON */}
-        <div className="lg:w-3/5 mx-auto flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 items-center justify-center py-16">
+        <div className="lg:w-3/5 mx-auto flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 items-center justify-center pt-16 pb-6">
           <button
             className="w-[90%] lg:w-full py-4 px-10 text-white text-sm bg-primary rounded-lg hover:scale-95 transition-all drop-shadow-xl"
             onClick={() => router.push("/docs")}
