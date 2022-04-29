@@ -563,6 +563,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 6vh;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-\[10vh\]{
+  margin-top: 10vh;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-\[8vh\]{
+  margin-top: 8vh;
+}
+
 .flex{
   display: flex;
 }
@@ -595,8 +615,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.w-\[95vw\]{
+  width: 95vw;
+}
+
 .cursor-pointer{
   cursor: pointer;
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
 .overflow-y-scroll{
@@ -637,6 +667,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 3vw;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -655,6 +694,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-semibold{
@@ -684,6 +728,41 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-neutral-700{
   --tw-text-opacity: 1;
   color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
+.text-slate-700{
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.text-slate-500{
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
+}
+
+.text-slate-600{
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.text-slate-400{
+  --tw-text-opacity: 1;
+  color: rgb(148 163 184 / var(--tw-text-opacity));
+}
+
+.text-neutral-400{
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity));
+}
+
+.text-neutral-600{
+  --tw-text-opacity: 1;
+  color: rgb(82 82 82 / var(--tw-text-opacity));
+}
+
+.underline{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 .transition-all{
