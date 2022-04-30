@@ -937,6 +937,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 10px;
 }
 
+.text-\[1\.9rem\]{
+  font-size: 1.9rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1199,6 +1203,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+
+  .lg\:text-\[3\.6rem\]{
+    font-size: 3.6rem;
   }
 
   .lg\:font-semibold{

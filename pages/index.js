@@ -65,7 +65,9 @@ const Home = () => {
 
       <div className="w-[95%] md:w-[85%] lg:w-4/6 2xl:w-3/5 mx-auto pt-[15vh] lg:pt-[20vh]">
         <div className="w-[95%] lg:w-4/6 mx-auto text-center text-[2rem] lg:text-6xl leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
-          Your <span className="text-primary font-semibold">online</span>{" "}
+          Your <span className="text-primary font-semibold">online</span>
+        </div>
+        <div className="w-[95%] lg:w-4/6 mx-auto text-center text-[1.9rem] lg:text-[3.6rem] leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
           commands manager
         </div>
         <h4 className="w-[90%] lg:w-4/5 mx-auto text-[12px] lg:text-sm font-medium text-center text-neutral-500 mt-[2vh] lg:mt-[3vh]">
