@@ -50,11 +50,13 @@ const Docs = ({ children, title }) => {
           borderBottomColor="#e9e9e9"
         >
           <Flex alignItems="center">
-            <img
-              src="/images/Header-Black.svg"
-              alt="Header"
-              className="object-contain max-h-[4vh]"
-            />
+            <Link href="/docs" passHref>
+              <img
+                src="/images/Header-Black.svg"
+                alt="Header"
+                className="object-contain max-h-[4vh]"
+              />
+            </Link>
             <Spacer />
             <button
               type="submit"

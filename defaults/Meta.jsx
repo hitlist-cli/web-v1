@@ -15,28 +15,29 @@ const Meta = ({ title, keywords, desc }) => {
       <meta property="og:url" content="https://hitlist.dev/" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
-      <meta property="og:image" content="/assets/preview.jpeg" />
+      <meta property="og:image" content="/images/preview.jpeg" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://hitlist.dev/" />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={desc} />
-      <meta property="twitter:image" content="/assets/preview.jpeg" />
+      <meta property="twitter:image" content="/images/preview.jpeg" />
 
       <meta property="og:site_name" content="Hit-List CLI" />
       <meta property="og:site" content="https://hitlist.dev/" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
       <meta property="og:image" content="" />
-      <meta property="og:url" content="/assets/preview.jpeg" />
+      <meta property="og:url" content="/images/preview.jpeg" />
       <title>{title}</title>
     </Head>
   );
 };
 
 Meta.defaultProps = {
-  title: "HitList CLI",
-  keywords: "commands, hit, list, hitlist, cli, command line",
+  title: "Hit-List CLI",
+  keywords:
+    "commands, hit, list, hitlist, cli, command line, ayodeji, osasona, developer, tool, tools, dev, ternimal, line",
   desc: "Your personal online commands manager! - Take your commands with you 😎",
 };
 

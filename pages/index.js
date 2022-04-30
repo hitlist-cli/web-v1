@@ -63,7 +63,7 @@ const Home = () => {
         />
       </nav>
 
-      <div className="w-[95%] md:w-[85%] lg:w-4/6 2xl:w-3/5 mx-auto pt-[15vh] lg:pt-[20vh]">
+      <section className="w-[95%] md:w-[85%] lg:w-4/6 2xl:w-3/5 mx-auto pt-[15vh] lg:pt-[20vh]">
         <div className="w-full mx-auto text-center text-[2rem] lg:text-6xl leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
           Your <span className="text-primary font-semibold">online</span>
         </div>
@@ -143,7 +143,7 @@ const Home = () => {
             Easy to use with minimal learning curve or documentation required
           </Feature>
         </div>
-      </div>
+      </section>
     </main>
   );
 };
