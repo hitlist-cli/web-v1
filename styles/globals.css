@@ -581,11 +581,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .mt-\[2vh\]{
   margin-top: 2vh;
 }
@@ -596,10 +591,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-4{
   margin-bottom: 1rem;
-}
-
-.mt-16{
-  margin-top: 4rem;
 }
 
 .mt-4{
@@ -632,6 +623,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-\[10vh\]{
   margin-bottom: 10vh;
+}
+
+.mt-16{
+  margin-top: 4rem;
 }
 
 .inline{
@@ -682,24 +677,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0.5rem;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .w-\[100\%\]{
   width: 100%;
 }
 
 .w-\[95vw\]{
   width: 95vw;
-}
-
-.w-10{
-  width: 2.5rem;
-}
-
-.w-11{
-  width: 2.75rem;
-}
-
-.w-12{
-  width: 3rem;
 }
 
 .cursor-pointer{
@@ -728,14 +715,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-evenly{
   justify-content: space-evenly;
-}
-
-.gap-3{
-  gap: 0.75rem;
-}
-
-.gap-4{
-  gap: 1rem;
 }
 
 .gap-6{
@@ -788,11 +767,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.75rem;
 }
 
-.border{
+.border-\[1px\]{
   border-width: 1px;
 }
 
-.border-\[1px\]{
+.border{
   border-width: 1px;
 }
 
@@ -890,16 +869,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
-.py-16{
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .pt-\[15vh\]{
   padding-top: 15vh;
 }
@@ -960,12 +929,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-\[10px\]{
-  font-size: 10px;
-}
-
 .text-\[11px\]{
   font-size: 11px;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
 }
 
 .font-bold{

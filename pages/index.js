@@ -82,7 +82,7 @@ const Home = () => {
             Documentation
           </button>
           <button
-            className="w-[90%] lg:w-full py-4 px-10 text-primary text-sm bg-white rounded-lg hover:scale-95 transition-all drop-shadow-xl"
+            className="w-[90%] lg:w-full py-4 px-10 border-[1px] border-primary text-primary text-sm rounded-lg hover:scale-95 transition-all"
             onClick={() => router.push("/auth/login")}
           >
             Sign In
@@ -134,7 +134,7 @@ const Home = () => {
             with one Hit
           </Feature>
           <Feature image="Cloud">
-            Keep your lists safely on the cloud and use them anywhere and
+            Keep your lists safely in the cloud and use them anywhere and
             anytime
           </Feature>
           <Feature image="Doc">
