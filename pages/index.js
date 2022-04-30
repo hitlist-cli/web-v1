@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Meta from "@/defaults/Meta";
 import Typed from "typed.js";
 import { gsap } from "gsap";
+import { FaTwitter } from "react-icons/fa";
 import Feature from "@/components/web/Feature";
 
 const Home = () => {
@@ -67,7 +68,7 @@ const Home = () => {
         <div className="w-full mx-auto text-center text-[2rem] lg:text-6xl leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
           Your <span className="text-primary font-semibold">online</span>
         </div>
-        <div className="w-[95%] lg:w-4/6 mx-auto text-center text-[1.9rem] lg:text-[3.6rem] leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
+        <div className="w-[95%] mx-auto text-center text-[1.9rem] lg:text-[3.6rem] leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
           commands manager
         </div>
         <h4 className="w-full mx-auto text-[12px] lg:text-sm font-medium text-center text-neutral-500 mt-[2vh] lg:mt-[3vh]">
@@ -144,6 +145,30 @@ const Home = () => {
           </Feature>
         </div>
       </section>
+      <footer className="w-full bg-neutral-50 py-6 lg:py-10 px-6 lg:px-6">
+        <div className="lg:w-4/5 flex items-center justify-between mx-auto">
+          <div className="flex flex-col items-start space-y-3">
+            <img
+              src="/images/Header-Black.svg"
+              alt="Header"
+              className="object-contain h-6 lg:h-8"
+            />
+            <h4 className="lg:text-[11px] text-[10px] font-normal">
+              Your Online Commands Manager
+            </h4>
+          </div>
+
+          <div className="bg-primary text-white p-2 rounded-full">
+            <a
+              href="https://twitter.com/hitlistcli"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter size={15} />
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 };

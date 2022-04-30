@@ -48,6 +48,14 @@ const Authentication = () => {
       </Description>
       <Command mt={4}>hit me</Command>
 
+      <SubHeader>Log Out</SubHeader>
+      <Description>
+        To sign out of Hit-List CLI, run the command below
+      </Description>
+      <Command mt={2}>sudo hit logout</Command>
+      <Description>For Windows Users</Description>
+      <Command mt={2}>hit logout</Command>
+
       <PageButton next={true} page="create-list">
         Create Lists ➕
       </PageButton>
