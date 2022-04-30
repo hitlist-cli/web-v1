@@ -4,21 +4,22 @@ import { useRouter } from "next/router";
 import Meta from "@/defaults/Meta";
 import Typed from "typed.js";
 import { gsap } from "gsap";
+import Feature from "@/components/web/Feature";
 
 const Home = () => {
   const router = useRouter();
   const One = useRef();
   const Two = useRef();
+  const resOne = useRef();
+  const resTwo = useRef();
 
   useEffect(() => {
     const typedOne = new Typed(One.current, {
-      strings: ["hit me", " "],
+      strings: ["hit me"],
       startDelay: 100,
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 2500,
-      loop: true,
-      loopCount: "Infinity",
     });
 
     return () => {
@@ -28,18 +29,27 @@ const Home = () => {
 
   useEffect(() => {
     const typedTwo = new Typed(Two.current, {
-      strings: ["hit run superlist", " "],
+      strings: ["hit run superlist"],
       startDelay: 600,
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 2500,
-      loop: true,
-      loopCount: "Infinity",
     });
 
     return () => {
       typedTwo.destroy();
     };
+  }, []);
+
+  //GSAP
+  useEffect(() => {
+    gsap
+      .fromTo(resOne.current, { opacity: 0 }, { opacity: 1, duration: 0.15 })
+      .delay(2.2);
+
+    gsap
+      .fromTo(resTwo.current, { opacity: 0 }, { opacity: 1, duration: 0.15 })
+      .delay(3.3);
   }, []);
 
   return (
@@ -60,7 +70,7 @@ const Home = () => {
         </div>
         <h4 className="w-[90%] lg:w-4/5 mx-auto text-[12px] lg:text-sm font-medium text-center text-neutral-500 mt-[2vh] lg:mt-[3vh]">
           Hit-List CLI allows you to carry your commands with you everywhere in
-          the cloud, share them with anyone you want and work smarter & faster.
+          the cloud, share them with anyone, work smarter & faster.
         </h4>
 
         {/* DOCS BUTTON */}
@@ -79,19 +89,22 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="bg-neutral-800 w-[95%] lg:w-4/5 mx-auto mt-[3vh] lg:mt-[5vh] px-6 py-4 rounded-lg drop-shadow-xl">
-          <div className="px-2 py-1 w-full flex justify-end items-center space-x-1 lg:space-x-2">
+        <div className="bg-neutral-800 w-[95%] lg:w-4/5 mx-auto mt-[3vh] lg:mt-[5vh] mb-4 px-6 py-4 rounded-lg drop-shadow-xl">
+          <div className="lg:px-2 lg:py-1 w-full flex justify-end items-center space-x-1 lg:space-x-2">
             <div className="bg-green-500 w-2 lg:w-3 aspect-square rounded-full"></div>
             <div className="bg-yellow-500 w-2 lg:w-3 aspect-square rounded-full"></div>
             <div className="bg-red-500 w-2 lg:w-3 aspect-square rounded-full"></div>
           </div>
 
-          <div className="px-3 pb-20">
+          <div className="px-3 pb-[5.2rem]">
             <div className="py-8">
               <p className="text-neutral-400 text-xs lg:text-sm font-semibold">
                 $ <span className="text-white font-semibold" ref={One}></span>
               </p>
-              <span className="text-xs lg:text-sm font-semibold text-white px-[1px]">
+              <span
+                className="text-xs lg:text-sm font-semibold text-white px-[1px]"
+                ref={resOne}
+              >
                 Currently logged in as{" "}
                 <span className="text-green-500 font-semibold">trulyao</span>
               </span>
@@ -101,12 +114,32 @@ const Home = () => {
               <p className="text-neutral-400 text-xs lg:text-sm font-semibold">
                 $ <span className="text-white font-semibold" ref={Two}></span>
               </p>
-              <span className="text-xs lg:text-sm font-semibold text-white px-[1px]">
+              <span
+                className="text-xs lg:text-sm font-semibold text-white px-[1px]"
+                ref={resTwo}
+              >
                 <span className="text-green-500 font-semibold">superlist</span>{" "}
                 has been successfully executed 🚀
               </span>
             </div>
           </div>
+        </div>
+
+        <div className="w-full mx-auto py-16 bg-transparent lg:grid lg:grid-cols-2 lg:gap-5">
+          <Feature image="Share">
+            Share your commands with anyone easily and quickly
+          </Feature>
+          <Feature image="Hit">
+            Make your workflow faster and cleaner by running multiple commands
+            with one Hit
+          </Feature>
+          <Feature image="Cloud">
+            Keep your lists safely on the cloud and use them anywhere and
+            anytime
+          </Feature>
+          <Feature image="Doc">
+            Easy to use with minimal learning curve or documentation required
+          </Feature>
         </div>
       </div>
     </main>
