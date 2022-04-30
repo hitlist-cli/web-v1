@@ -78,7 +78,7 @@ const Home = () => {
         {/* DOCS BUTTON */}
         <div className="lg:w-3/5 mx-auto flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 items-center justify-center pt-16 pb-6">
           <button
-            className="w-[90%] lg:w-full py-4 px-10 text-white text-sm bg-primary rounded-lg hover:scale-95 transition-all drop-shadow-xl"
+            className="w-[90%] lg:w-full py-4 px-10 text-white text-sm bg-primary rounded-lg hover:scale-95 transition-all"
             onClick={() => router.push("/docs")}
           >
             Documentation
