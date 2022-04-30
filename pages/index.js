@@ -55,7 +55,7 @@ const Home = () => {
   return (
     <main className="Body">
       <Meta title="Hit-List CLI" />
-      <nav className="w-full bg-white fixed top-0 py-4 lg:py-5 px-5 lg:px-7 drop-shadow-md">
+      <nav className="w-full bg-white fixed top-0 py-4 lg:py-5 px-5 lg:px-7 drop-shadow-md z-[99]">
         <img
           src="/images/Header-Black.svg"
           alt="Header"
@@ -125,7 +125,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-full mx-auto py-16 bg-transparent lg:grid lg:grid-cols-2 lg:gap-5">
+        <div className="w-[95%] lg:w-full mx-auto pt-16 pb-24 bg-transparent grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-5">
           <Feature image="Share">
             Share your commands with anyone easily and quickly
           </Feature>

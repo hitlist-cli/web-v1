@@ -12,15 +12,17 @@ const Feature = ({ children, image }) => {
   }, []);
   return (
     <div
-      className=" flex items-center space-x-5 border-[1px] border-primary px-5 py-4 rounded-xl"
-      data-aos="zoom-up"
+      className=" flex items-center space-x-5 bg-white drop-shadow-lg px-5 py-4 rounded-xl"
+      data-aos="zoom-in-up"
     >
       <img
         src={`/images/${image}.svg`}
         alt={image}
-        className="lg:w-12 aspect-square"
+        className="w-12 lg:w-12 aspect-square"
       />
-      <div className="text-xs text-slate-500 font-normal">{children}</div>
+      <div className="text-[11px] lg:text-xs text-slate-500 font-normal">
+        {children}
+      </div>
     </div>
   );
 };
