@@ -6,7 +6,22 @@ import { BiPowerOff, BiPlus, BiEditAlt } from "react-icons/bi";
 import { FiRefreshCw } from "react-icons/fi";
 import { IoCopyOutline } from "react-icons/io5";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { useToast, Spinner, Box } from "@chakra-ui/react";
+import {
+  useToast,
+  Spinner,
+  Box,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+  Input,
+  Textarea,
+} from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
 import Link from "next/link";
 import axios from "axios";
@@ -15,9 +30,11 @@ import { url } from "@/config/url";
 const Dashboard = () => {
   const router = useRouter();
   const toast = useToast();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const { Token, User, isAuth } = useContext(AuthContext);
 
   //States
+  const [Current, setCurrent] = useState({});
   const [Data, setData] = useState([]);
   const [Status, setStatus] = useState({
     Error: false,
@@ -27,6 +44,7 @@ const Dashboard = () => {
   });
 
   //If the user is not logged in
+
   useEffect(() => {
     if (!isAuth()) {
       router.push("/auth/login");
@@ -78,16 +96,33 @@ const Dashboard = () => {
       </div>
     );
   }
+
+  //Count public lists
   const countPublic = (data) => {
     const publicList = data.filter((x) => x.visibility === "public");
     const count = publicList.length ? publicList.length : 0;
     return count;
   };
 
+  //Count private lists
   const countPrivate = (data) => {
     const privateList = data.filter((x) => x.visibility === "private");
     const count = privateList.length ? privateList.length : 0;
     return count;
+  };
+
+  //Edit a list
+  const listAction = (data) => {
+    setCurrent(data);
+    onOpen();
+  };
+
+  //Add list
+  const editList = (data, index) => {
+    const ListArray = Current.list;
+    const ListValue = data;
+    ListArray[index] = ListValue;
+    setCurrent({ ...Current, list: ListArray });
   };
 
   return (
@@ -107,11 +142,12 @@ const Dashboard = () => {
           >
             <FiRefreshCw size="16" />
           </button>
-          <div className="text-red-600 bg-red-100 p-2 rounded-full cursor-pointer">
-            <Link href="/auth/logout" passHref>
+
+          <Link href="/auth/logout" passHref>
+            <div className="text-red-600 bg-red-100 p-2 rounded-full cursor-pointer">
               <BiPowerOff size="19" />
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </nav>
 
@@ -152,7 +188,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-400 pt-6 pb-5 px-1">
+        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-500 pt-6 pb-5 px-1">
           Your Lists 🛠
         </h2>
         <div>
@@ -188,7 +224,10 @@ const Dashboard = () => {
                       <p className="text-xs font-medium">Copy</p>
                     </button>
 
-                    <button className="flex items-center space-x-1 hover:scale-95 transition-all">
+                    <button
+                      className="flex items-center space-x-1 hover:scale-95 transition-all"
+                      onClick={() => listAction(list)}
+                    >
                       <p>
                         <BiEditAlt size={17} />
                       </p>
@@ -216,6 +255,50 @@ const Dashboard = () => {
       <button className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg">
         <BiPlus />
       </button>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Add/Edit</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Input
+              placeholder="List name"
+              type="text"
+              fontSize="sm"
+              required={true}
+              value={Current.name}
+              onChange={(e) => {
+                setCurrent({ ...Current, name: e.target.value });
+              }}
+            />
+            <p className="mt-4 mb-1 px-1 text-neutral-600 text-sm font-semibold">
+              Hits
+            </p>
+            {Current.name
+              ? Current.list.map((hit, index) => (
+                  <Input
+                    key={index}
+                    mb={3}
+                    fontSize="sm"
+                    placeholder={`Hit ${index + 1}`}
+                    value={hit}
+                    onChange={(e) => editList(e.target.value, index)}
+                  />
+                ))
+              : "No lists? What are you doing?"}
+          </ModalBody>
+
+          <ModalFooter>
+            <Button fontSize="sm" colorScheme="red" mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button fontSize="sm" variant="ghost">
+              Save
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 };

@@ -626,6 +626,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-\[2vh\]{
   margin-top: 2vh;
 }
@@ -712,6 +722,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-\[6vh\]{
   margin-bottom: 6vh;
+}
+
+.mb-1{
+  margin-bottom: 0.25rem;
 }
 
 .block{
