@@ -75,7 +75,7 @@ const SignUp = () => {
       })
       .catch((error) => {
         toast({
-          title: "Unable to sign in",
+          title: "Unable to sign up",
           description: error.response.data.message,
           status: "error",
           duration: 3000,

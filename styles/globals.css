@@ -582,6 +582,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.bottom-10{
+  bottom: 2.5rem;
+}
+
+.right-10{
+  right: 2.5rem;
+}
+
+.bottom-6{
+  bottom: 1.5rem;
+}
+
+.right-6{
+  right: 1.5rem;
+}
+
 .z-\[99\]{
   z-index: 99;
 }
@@ -672,6 +688,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-\[8vh\]{
   margin-top: 8vh;
+}
+
+.mt-\[5vh\]{
+  margin-top: 5vh;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
 }
 
 .block{
@@ -1051,6 +1075,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 242 242 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-60{
   --tw-bg-opacity: 0.6;
 }
@@ -1066,6 +1095,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-4{
   padding: 1rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .py-4{
@@ -1143,6 +1176,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pt-\[15vh\]{
   padding-top: 15vh;
 }
@@ -1169,6 +1207,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-3{
   padding-left: 0.75rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .text-center{
@@ -1217,6 +1259,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-\[11px\]{
   font-size: 11px;
+}
+
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-bold{
@@ -1342,6 +1394,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-neutral-700{
+  --tw-text-opacity: 1;
+  color: rgb(64 64 64 / var(--tw-text-opacity));
+}
+
 .underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1380,6 +1437,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .drop-shadow-lg{
   --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-sm{
+  --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1497,6 +1563,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: relative;
   }
 
+  .lg\:bottom-10{
+    bottom: 2.5rem;
+  }
+
+  .lg\:right-10{
+    right: 2.5rem;
+  }
+
   .lg\:col-span-8{
     grid-column: span 8 / span 8;
   }
@@ -1519,6 +1593,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:mt-12{
     margin-top: 3rem;
+  }
+
+  .lg\:mt-\[10vh\]{
+    margin-top: 10vh;
   }
 
   .lg\:block{
@@ -1545,6 +1623,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 4rem;
   }
 
+  .lg\:h-9{
+    height: 2.25rem;
+  }
+
   .lg\:w-4\/6{
     width: 66.666667%;
   }
@@ -1567,6 +1649,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-12{
     width: 3rem;
+  }
+
+  .lg\:w-3\/6{
+    width: 50%;
   }
 
   .lg\:grid-cols-2{
@@ -1636,6 +1722,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .lg\:pt-\[20vh\]{
