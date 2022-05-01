@@ -15,7 +15,7 @@ const Login = () => {
 
   //if user is logged in
   useEffect(() => {
-    if (isAuth) {
+    if (isAuth()) {
       toast({
         title: "Already signed in",
         description: "Redirecting you to your dashboard...",
@@ -65,6 +65,9 @@ const Login = () => {
         });
         Auth(response.data.token, response.data.email, response.data.username);
         setStatus({ ...Status, Loading: false });
+        setTimeout(() => {
+          router.push("/dashboard");
+        }, 1800);
       })
       .catch((error) => {
         toast({
