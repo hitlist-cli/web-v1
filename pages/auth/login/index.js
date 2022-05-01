@@ -6,6 +6,7 @@ import axios from "axios";
 import { AuthContext } from "@/context/AuthContext";
 import { useToast, Spinner } from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
+import Link from "next/link";
 
 const Login = () => {
   //FUNCS & CONTEXT
@@ -90,7 +91,7 @@ const Login = () => {
             <img
               className="mx-auto h-12 lg:h-16 w-auto "
               src="/images/Logo-Black.svg"
-              alt="Workflow"
+              alt="logo"
             />
 
             <h2 className="mt-8 lg:mt-12 text-center text-3xl font-bold text-neutral-900">
@@ -101,7 +102,6 @@ const Login = () => {
             </p>
           </div>
           <form className="mt-10 lg:mt-12 space-y-6" onSubmit={formHandler}>
-            <input type="hidden" name="remember" value="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
                 <label htmlFor="email-address" className="sr-only">
@@ -140,13 +140,8 @@ const Login = () => {
                 />
               </div>
             </div>
-            <div className="text-sm">
-              <a
-                href="#"
-                className="font-medium text-xs text-primary hover:text-primary"
-              >
-                Forgot your password?
-              </a>
+            <div className="font-medium text-xs text-primary hover:text-primary">
+              <Link href="#">Forgot your password?</Link>
             </div>
 
             <div>
@@ -158,13 +153,8 @@ const Login = () => {
               </button>
             </div>
 
-            <div className="text-sm text-center">
-              <a
-                href="/signup"
-                className="font-medium text-xs text-primary hover:text-primary"
-              >
-                Create an account
-              </a>
+            <div className="text-sm text-center font-medium  text-primary hover:text-primary">
+              <Link href="/auth/signup">Create an account</Link>
             </div>
           </form>
         </div>
