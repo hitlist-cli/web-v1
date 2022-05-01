@@ -188,7 +188,7 @@ const SignUp = () => {
             </div>
 
             <div className="text-sm text-center font-medium text-primary hover:text-primary">
-              <Link href="/auth/signin">Sign in to your account</Link>
+              <Link href="/auth/login">Sign in to your account</Link>
             </div>
           </form>
         </div>

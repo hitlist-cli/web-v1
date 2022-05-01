@@ -102,19 +102,19 @@ const Dashboard = () => {
         </div>
       </nav>
 
-      <main className="container w-[90%] md:w-[80%] lg:w-4/6 2xl:w-3/5 mx-auto mt-[5vh] lg:mt-[10vh]">
-        <div className="px-5 pt-6 bg-white drop-shadow-lg rounded-xl">
+      <main className="container w-[90%] md:w-[80%] lg:w-3/6 2xl:w-3/5 mx-auto mt-[5vh] lg:mt-[10vh]">
+        <div className=" mx-auto px-5 py-7 bg-white shadow-md rounded-xl">
           <h1 className="text-primary text-3xl font-semibold">
             <span className="text-neutral-800 font-semibold">@</span>
             {User.username}
           </h1>
 
-          <div className="flex justify-evenly py-5 mt-3">
+          <div className="flex justify-evenly mt-6 lg:mt-5">
             <div className="flex flex-col items-center">
               <h3 className="text-[10px] text-neutral-400 font-bold">
                 LISTS USED
               </h3>
-              <h1 className="text-neutral-800 text-3xl font-semibold">
+              <h1 className="text-neutral-800 text-3xl lg:text-4xl mt-1 font-semibold">
                 {Data ? Data.length : 0}
               </h1>
             </div>
@@ -123,7 +123,7 @@ const Dashboard = () => {
               <h3 className="text-[10px] text-neutral-400 font-bold">
                 PUBLIC LISTS
               </h3>
-              <h1 className="text-neutral-800 text-3xl font-semibold">
+              <h1 className="text-neutral-800 text-3xl lg:text-4xl mt-1 font-semibold">
                 {countPublic(Data)}
               </h1>
             </div>
@@ -132,12 +132,16 @@ const Dashboard = () => {
               <h3 className="text-[10px] text-neutral-400 font-bold">
                 PRIVATE LISTS
               </h3>
-              <h1 className="text-neutral-800 text-3xl font-semibold">
+              <h1 className="text-neutral-800 text-3xl lg:text-4xl mt-1 font-semibold">
                 {countPrivate(Data)}
               </h1>
             </div>
           </div>
         </div>
+
+        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-400 py-6 px-1">
+          Your Lists 🛠
+        </h2>
       </main>
 
       <button className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg">
