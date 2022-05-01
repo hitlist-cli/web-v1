@@ -116,7 +116,7 @@ const Dashboard = () => {
       </nav>
 
       <main className="container w-[90%] md:w-[80%] lg:w-3/6 2xl:w-3/5 mx-auto mt-[12vh] lg:mt-[15vh]">
-        <div className=" mx-auto px-5 py-7 bg-neutral-50 shadow-md rounded-xl">
+        <div className=" mx-auto px-5 py-7 shadow-md rounded-xl">
           <h1 className="text-primary text-3xl font-semibold">
             <span className="text-neutral-800 font-semibold">@</span>
             {User.username}
@@ -152,24 +152,21 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-400 py-6 px-1">
-          Your Lists
+        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-400 pt-6 pb-5 px-1">
+          Your Lists 🛠
         </h2>
         <div>
           {Data.length > 0 ? (
-            <div className="grid lg:grid-cols-2 lg:gap-3 gap-3">
+            <div className="grid lg:grid-cols-2 lg:gap-3 gap-3 mb-[6vh]">
               {Data.map((list, index) => (
-                <div
-                  key={index}
-                  className="shadow-md rounded-xl px-5 pt-4 bg-neutral-50"
-                >
+                <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
                     {list.name}
                   </h1>
                   <h3 className="text-[11px] text-neutral-500 font-normal py-2">
                     {list.description}
                   </h3>
-                  <div className="flex justify-between py-4">
+                  <div className="flex justify-between py-5">
                     <button
                       className="flex items-center space-x-1 hover:scale-95 transition-all"
                       onClick={() => {

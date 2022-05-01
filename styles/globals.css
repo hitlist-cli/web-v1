@@ -710,6 +710,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 12vh;
 }
 
+.mb-\[6vh\]{
+  margin-bottom: 6vh;
+}
+
 .block{
   display: block;
 }
@@ -1270,6 +1274,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-3{
   padding-top: 0.75rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
 }
 
 .text-center{
