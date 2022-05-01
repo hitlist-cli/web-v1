@@ -173,6 +173,7 @@ const Dashboard = () => {
                         navigator.clipboard.writeText(`hit run ${list.name}`);
                         toast({
                           position: "top-right",
+                          duration: 2000,
                           render: () => (
                             <Box color="white" py={3} px={5} bg="gray.800">
                               Copied!
