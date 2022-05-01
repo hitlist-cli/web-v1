@@ -46,9 +46,11 @@ const Dashboard = () => {
   //If the user is not logged in
 
   useEffect(() => {
-    if (!isAuth()) {
-      router.push("/auth/login");
-    }
+    setTimeout(() => {
+      if (!isAuth()) {
+        router.push("/auth/login");
+      }
+    }, 8000);
   }, [isAuth]);
 
   //Get data on page render
@@ -193,7 +195,7 @@ const Dashboard = () => {
         </h2>
         <div>
           {Data.length > 0 ? (
-            <div className="grid lg:grid-cols-2 lg:gap-3 gap-3 mb-[6vh]">
+            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[6vh]">
               {Data.map((list, index) => (
                 <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
