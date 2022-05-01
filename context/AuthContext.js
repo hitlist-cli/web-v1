@@ -1,10 +1,12 @@
 import { createContext, useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 const AuthContext = createContext();
 
 const { Provider } = AuthContext;
 
 const AuthProvider = ({ children }) => {
+  const router = useRouter();
   const [Token, setToken] = useState("");
   const [User, setUser] = useState({
     email: "",
@@ -46,7 +48,13 @@ const AuthProvider = ({ children }) => {
   };
 
   //Destroy session
-  const destroyAuth = () => {};
+  const destroyAuth = () => {
+    setToken("");
+    localStorage.removeItem("token");
+    localStorage.removeItem("email");
+    localStorage.removeItem("username");
+    router.push("/auth/login");
+  };
 
   return (
     <Provider value={{ Token, User, Auth, isAuth, destroyAuth }}>

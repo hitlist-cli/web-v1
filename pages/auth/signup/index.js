@@ -7,7 +7,7 @@ import { AuthContext } from "@/context/AuthContext";
 import { useToast, Spinner } from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
 
-const Login = () => {
+const SignUp = () => {
   //FUNCS & CONTEXT
   const toast = useToast();
   const { Auth, isAuth } = useContext(AuthContext);
@@ -173,4 +173,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
