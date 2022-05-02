@@ -382,9 +382,9 @@ const Dashboard = () => {
         </div>
       </main>
 
-      {/* <button className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg">
+      <button className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg">
         <BiPlus />
-      </button> */}
+      </button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />

@@ -141,30 +141,6 @@ const Docs = ({ children, title }) => {
                 <p className="my-4 text-[10px] text-slate-400">
                   Send feedback and reports to hit@hitlist.dev
                 </p>
-                <div className="flex justify-evenly items-center px-2">
-                  <p>
-                    🛠 Built by{" "}
-                    <a
-                      className="underline text-slate-700"
-                      href="https://twitter.com/trulyao"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Ayodeji
-                    </a>
-                  </p>
-                  <p className="">
-                    🎨 Designed by{" "}
-                    <a
-                      className="underline text-slate-700"
-                      href="https://twitter.com/AbdurrazzaqAbd9"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Bidemi
-                    </a>
-                  </p>
-                </div>
               </footer>
             </div>
           </div>
@@ -187,28 +163,6 @@ const Docs = ({ children, title }) => {
                     <FaTwitter /> <div>Twitter</div>
                   </a>
 
-                  <p className="text-xs text-slate-500">
-                    🛠 Built by{" "}
-                    <a
-                      className="underline text-slate-700"
-                      href="https://twitter.com/trulyao"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Ayodeji
-                    </a>
-                  </p>
-                  <p className="mt-4 text-slate-500 text-xs">
-                    🎨 Designed by{" "}
-                    <a
-                      className="underline text-slate-700"
-                      href="https://twitter.com/AbdurrazzaqAbd9"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Bidemi
-                    </a>
-                  </p>
                   <p className="text-[10px] text-slate-500">hit@hitlist.dev</p>
                 </Stack>
               </Flex>
