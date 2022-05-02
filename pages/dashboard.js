@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { AuthContext } from "@/context/AuthContext";
 import { BiPowerOff, BiPlus, BiEditAlt } from "react-icons/bi";
@@ -21,6 +21,7 @@ import {
   Button,
   Input,
   Textarea,
+  Checkbox,
 } from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
 import Link from "next/link";
@@ -34,6 +35,7 @@ const Dashboard = () => {
   const { Token, User, isAuth } = useContext(AuthContext);
 
   //States
+  const [CurrentIndex, setCurrentIndex] = useState(null);
   const [Current, setCurrent] = useState({});
   const [Data, setData] = useState([]);
   const [Status, setStatus] = useState({
@@ -44,14 +46,11 @@ const Dashboard = () => {
   });
 
   //If the user is not logged in
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (!isAuth()) {
-        router.push("/auth/login");
-      }
-    }, 8000);
-  }, [isAuth]);
+  //   useEffect(() => {
+  //     if (!isAuth()) {
+  //       router.replace("/auth/login");
+  //     }
+  //   }, []);
 
   //Get data on page render
   useEffect(() => {
@@ -91,10 +90,13 @@ const Dashboard = () => {
 
   if (!User || !Token || Status.Loading) {
     return (
-      <div className="w-screen h-[90vh] flex items-center justify-center">
+      <div className="w-screen h-[90vh] flex flex-col items-center justify-center">
         <Meta title={`${User.username.toUpperCase()}'s Dashboard`} />
 
         <Spinner size="xl" />
+        <p className="text-neutral-400 text-xs mt-8">
+          Taking too long? Sign in again
+        </p>
       </div>
     );
   }
@@ -114,17 +116,73 @@ const Dashboard = () => {
   };
 
   //Edit a list
-  const listAction = (data) => {
+  const listAction = (data, index) => {
     setCurrent(data);
+    setCurrentIndex(index);
     onOpen();
   };
 
-  //Add list
-  const editList = (data, index) => {
-    const ListArray = Current.list;
-    const ListValue = data;
-    ListArray[index] = ListValue;
+  //Edit list
+  const editList = (data) => {
+    const Data = data.split(",");
+    const ListArray = [];
+    Data.forEach((hit) => {
+      ListArray.push(hit.trim());
+    });
     setCurrent({ ...Current, list: ListArray });
+  };
+
+  //EDIT LIST - make API call
+  const runEdit = (index) => {
+    setStatus({ ...Status, Loading: true });
+
+    const Body = {
+      name: Current.name !== Data[index].name ? Current.name : "",
+      list: Current.list !== Data[index].list ? Current.list : "",
+      description:
+        Current.description !== Data[index].description
+          ? Current.description
+          : "",
+      visibility:
+        Current.visibility !== Data[index].visibility ? Current.visibility : "",
+    };
+
+    const Header = {
+      headers: {
+        Authorization: "Bearer " + Token,
+      },
+    };
+
+    axios
+      .post(`${url}/list/edit/${Current._id.toString()}`, Body, Header)
+      .then((response) => {
+        toast({
+          title: "List Saved",
+          description: response.data.message,
+          status: "success",
+          duration: 2600,
+          isClosable: true,
+          position: "top-right",
+        });
+        setCurrentIndex(null);
+        setCurrent({});
+        onClose();
+        getData();
+        setStatus({ ...Status, Loading: false });
+      })
+      .catch((error) => {
+        toast({
+          title: "Unable to save changes",
+          description: error.response.data.message
+            ? error.response.data.message
+            : "Something went wrong! Please try again",
+          status: "error",
+          duration: 2600,
+          isClosable: true,
+          position: "top-right",
+        });
+        setStatus({ ...Status, Loading: false });
+      });
   };
 
   return (
@@ -228,7 +286,7 @@ const Dashboard = () => {
 
                     <button
                       className="flex items-center space-x-1 hover:scale-95 transition-all"
-                      onClick={() => listAction(list)}
+                      onClick={() => listAction(list, index)}
                     >
                       <p>
                         <BiEditAlt size={17} />
@@ -261,7 +319,7 @@ const Dashboard = () => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Add/Edit</ModalHeader>
+          <ModalHeader>Edit | {Current.name}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Input
@@ -274,28 +332,56 @@ const Dashboard = () => {
                 setCurrent({ ...Current, name: e.target.value });
               }}
             />
-            <p className="mt-4 mb-1 px-1 text-neutral-600 text-sm font-semibold">
+            <p className="mt-4 mb-1 px-1 text-primary text-sm font-semibold">
               Hits
             </p>
-            {Current.name
-              ? Current.list.map((hit, index) => (
-                  <Input
-                    key={index}
-                    mb={3}
-                    fontSize="sm"
-                    placeholder={`Hit ${index + 1}`}
-                    value={hit}
-                    onChange={(e) => editList(e.target.value, index)}
-                  />
-                ))
-              : "No lists? What are you doing?"}
+
+            {Current.name ? (
+              <Input
+                mt={2}
+                fontSize="sm"
+                placeholder={`Hits`}
+                value={Current.list.join(", ")}
+                onChange={(e) => editList(e.target.value)}
+              />
+            ) : (
+              "No lists? What are you doing?"
+            )}
+
+            <p className="mt-4 mb-3 px-1 text-primary text-sm font-semibold">
+              Description
+            </p>
+            <Textarea
+              value={Current.description}
+              fontSize="xs"
+              onChange={(e) =>
+                setCurrent({ ...Current, description: e.target.value })
+              }
+            />
+
+            <Checkbox
+              mt={4}
+              defaultChecked={Current.visibility === "public" ? true : false}
+              onChange={(e) =>
+                setCurrent({
+                  ...Current,
+                  visibility: e.target.checked === true ? "public" : "private",
+                })
+              }
+            >
+              Public
+            </Checkbox>
           </ModalBody>
 
           <ModalFooter>
             <Button fontSize="sm" colorScheme="red" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button fontSize="sm" variant="ghost">
+            <Button
+              onClick={() => runEdit(CurrentIndex)}
+              fontSize="sm"
+              variant="ghost"
+            >
               Save
             </Button>
           </ModalFooter>
