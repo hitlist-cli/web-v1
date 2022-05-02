@@ -126,7 +126,7 @@ const Docs = ({ children, title }) => {
                 border="1px"
                 borderColor="green.300"
                 textColor="green.400"
-                fontSize={12}
+                fontSize={11}
                 borderRadius={15}
                 py={4}
                 px={5}
