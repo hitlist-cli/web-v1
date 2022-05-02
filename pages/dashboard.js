@@ -185,6 +185,48 @@ const Dashboard = () => {
       });
   };
 
+  //Delete a list
+  const DeleteList = (i) => {
+    const List = Data[i];
+
+    setStatus({ ...Status, Loading: true });
+
+    const Header = {
+      headers: {
+        Authorization: "Bearer " + Token,
+      },
+    };
+
+    axios
+      .delete(`${url}/list/${List.name}`, Header, {})
+      .then((response) => {
+        toast({
+          title: "List Deleted!",
+          description: response.data.message,
+          status: "success",
+          duration: 2600,
+          isClosable: true,
+          position: "top-right",
+        });
+
+        getData();
+        setStatus({ ...Status, Loading: false });
+      })
+      .catch((error) => {
+        toast({
+          title: "Unable to delete",
+          description: error.response.data.message
+            ? error.response.data.message
+            : "Something went wrong! Please try again",
+          status: "error",
+          duration: 2600,
+          isClosable: true,
+          position: "top-right",
+        });
+        setStatus({ ...Status, Loading: false });
+      });
+  };
+
   return (
     <>
       <Meta title={`${User.username.toUpperCase()}'s Dashboard`} />
@@ -253,7 +295,7 @@ const Dashboard = () => {
         </h2>
         <div>
           {Data.length > 0 ? (
-            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[6vh]">
+            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[6vh] select-none">
               {Data.map((list, index) => (
                 <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
@@ -271,7 +313,13 @@ const Dashboard = () => {
                           position: "top-right",
                           duration: 2000,
                           render: () => (
-                            <Box color="white" py={3} px={5} bg="gray.800">
+                            <Box
+                              color="white"
+                              py={3}
+                              px={5}
+                              bg="gray.800"
+                              borderRadius="lg"
+                            >
                               Copied!
                             </Box>
                           ),
@@ -298,7 +346,29 @@ const Dashboard = () => {
                       <p>
                         <RiDeleteBin5Line size={17} />
                       </p>
-                      <p className="text-xs font-medium">Delete</p>
+                      <p
+                        className="text-xs font-medium"
+                        onClick={() => {
+                          toast({
+                            position: "top-right",
+                            duration: 2000,
+                            render: () => (
+                              <Box
+                                color="white"
+                                py={3}
+                                px={5}
+                                bg="gray.800"
+                                borderRadius="lg"
+                              >
+                                Double-press to delete!
+                              </Box>
+                            ),
+                          });
+                        }}
+                        onDoubleClick={() => DeleteList(index)}
+                      >
+                        Delete
+                      </p>
                     </button>
                   </div>
                 </div>
