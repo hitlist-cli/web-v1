@@ -20,6 +20,18 @@ const DocHome = () => {
           terminal; consequently improving your workflow efficiency.
         </p>
 
+        <div className="flex justify-center mt-7">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wGCJQfiwTRA"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
         <Info>
           <Text fontSize="xs">
             Scenario 1 : You have 5 commands to start up your server/program

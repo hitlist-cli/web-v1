@@ -67,7 +67,7 @@ const Docs = ({ children, title }) => {
               <RiMenu3Line size={25} />
             </button>
             <h1 className="text-slate-500 text-sm hidden lg:block font-semibold">
-              v1.0.6
+              v1.0.7
             </h1>
           </Flex>
         </Box>
