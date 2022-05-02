@@ -337,7 +337,7 @@ const Dashboard = () => {
             </p>
 
             {Current.name ? (
-              <Input
+              <Textarea
                 mt={2}
                 fontSize="sm"
                 placeholder={`Hits`}
