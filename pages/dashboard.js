@@ -2,6 +2,7 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { AuthContext } from "@/context/AuthContext";
+import { BsX } from "react-icons/bs";
 import { BiPowerOff, BiPlus, BiEditAlt } from "react-icons/bi";
 import { FiRefreshCw } from "react-icons/fi";
 import { IoCopyOutline } from "react-icons/io5";
@@ -403,7 +404,7 @@ const Dashboard = () => {
         className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg"
         onClick={() => setShow(Show ? false : true)}
       >
-        <BiPlus />
+        {Show ? <BsX /> : <BiPlus />}
       </button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
