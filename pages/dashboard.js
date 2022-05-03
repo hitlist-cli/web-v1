@@ -22,11 +22,13 @@ import {
   Input,
   Textarea,
   Checkbox,
+  Badge,
 } from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
 import Link from "next/link";
 import axios from "axios";
 import { url } from "@/config/url";
+import Add from "@/components/web/Add";
 
 const Dashboard = () => {
   const router = useRouter();
@@ -37,6 +39,7 @@ const Dashboard = () => {
   //States
   const [CurrentIndex, setCurrentIndex] = useState(null);
   const [Current, setCurrent] = useState({});
+  const [Show, setShow] = useState(false);
   const [Data, setData] = useState([]);
   const [Status, setStatus] = useState({
     Error: false,
@@ -230,7 +233,7 @@ const Dashboard = () => {
   return (
     <>
       <Meta title={`${User.username.toUpperCase()}'s Dashboard`} />
-      <nav className="fixed top-0 w-screen flex justify-between items-center py-4 px-5 lg:px-10 bg-white drop-shadow-md">
+      <nav className="fixed top-0 w-screen flex justify-between items-center py-4 px-5 lg:px-10 bg-white drop-shadow-md z-[99]">
         <img
           className="h-8 lg:h-9 w-auto "
           src="/images/Logo-Black.svg"
@@ -253,7 +256,7 @@ const Dashboard = () => {
         </div>
       </nav>
 
-      <main className="container w-[90%] md:w-[80%] lg:w-3/6 2xl:w-3/5 mx-auto mt-[12vh] lg:mt-[15vh]">
+      <main className="container w-[90%] md:w-[80%] lg:w-3/5 xl:w-3/6 2xl:w-3/5 mx-auto mt-[12vh] lg:mt-[15vh]">
         <div className=" mx-auto px-5 py-7 shadow-md rounded-xl">
           <h1 className="text-primary text-3xl font-semibold">
             <span className="text-neutral-800 font-semibold">@</span>
@@ -289,7 +292,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-
+        {Show && <Add token={Token} setShow={setShow} getData={getData} />}
         <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-500 pt-6 pb-5 px-1">
           Your Lists 🛠
         </h2>
@@ -299,7 +302,21 @@ const Dashboard = () => {
               {Data.map((list, index) => (
                 <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
-                    {list.name}
+                    {list.name}{" "}
+                    <Badge
+                      fontSize={10}
+                      ml={2}
+                      px={3}
+                      rounded="xl"
+                      variant={
+                        list.visibility === "public" ? "subtle" : "outline"
+                      }
+                      colorScheme={
+                        list.visibility === "public" ? "blue" : "blackAlpha"
+                      }
+                    >
+                      {list.visibility}
+                    </Badge>
                   </h1>
                   <h3 className="text-[11px] text-neutral-500 font-normal py-2">
                     {list.description}
@@ -382,7 +399,10 @@ const Dashboard = () => {
         </div>
       </main>
 
-      <button className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg">
+      <button
+        className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 text-primary text-4xl p-3 bg-white rounded-full drop-shadow-lg"
+        onClick={() => setShow(Show ? false : true)}
+      >
         <BiPlus />
       </button>
 

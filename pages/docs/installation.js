@@ -30,7 +30,7 @@ const Installation = () => {
       <Description>
         Mac and Linux systems require special permissions for global
         installations. Run any of the commands below to install Hit-List CLI on
-        your machine.
+        your machine and enter your computer&apos;s password.
       </Description>
       <Command mt={4}>sudo npm i -g hitlist-cli</Command>
 
