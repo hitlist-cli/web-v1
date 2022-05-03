@@ -299,7 +299,7 @@ const Dashboard = () => {
         </h2>
         <div>
           {Data.length > 0 ? (
-            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[6vh] select-none">
+            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[10vh] select-none">
               {Data.map((list, index) => (
                 <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
