@@ -40,6 +40,7 @@ const Dashboard = () => {
   //States
   const [CurrentIndex, setCurrentIndex] = useState(null);
   const [Current, setCurrent] = useState({});
+  const [CurrentText, setCurrentText] = useState("");
   const [Show, setShow] = useState(false);
   const [Data, setData] = useState([]);
   const [Status, setStatus] = useState({
@@ -92,6 +93,9 @@ const Dashboard = () => {
       });
   };
 
+  /**
+   * Loading State
+   */
   if (!User || !Token || Status.Loading) {
     return (
       <div className="w-screen h-[90vh] flex flex-col items-center justify-center">
@@ -123,17 +127,20 @@ const Dashboard = () => {
   const listAction = (data, index) => {
     setCurrent(data);
     setCurrentIndex(index);
+    setCurrentText(data.list.join(", "));
     onOpen();
   };
 
   //Edit list
   const editList = (data) => {
+    setCurrentText(data);
     const Data = data.split(",");
     const ListArray = [];
     Data.forEach((hit) => {
       ListArray.push(hit.trim());
     });
     setCurrent({ ...Current, list: ListArray });
+    // console.log(ListArray, data);
   };
 
   //EDIT LIST - make API call
@@ -170,6 +177,7 @@ const Dashboard = () => {
         });
         setCurrentIndex(null);
         setCurrent({});
+        setCurrentText("");
         onClose();
         getData();
         setStatus({ ...Status, Loading: false });
@@ -294,12 +302,12 @@ const Dashboard = () => {
           </div>
         </div>
         {Show && <Add token={Token} setShow={setShow} getData={getData} />}
-        <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-500 pt-6 pb-5 px-1">
+        <h2 className="text-[1.8rem] lg:text-3xl font-semibold text-neutral-500 pt-6 pb-5 px-1">
           Your Lists 🛠
         </h2>
         <div>
           {Data.length > 0 ? (
-            <div className="grid lg:grid-cols-2 lg:gap-4 gap-3 mb-[10vh] select-none">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 gap-3 mb-[10vh] select-none">
               {Data.map((list, index) => (
                 <div key={index} className="shadow-md rounded-xl px-5 pt-4">
                   <h1 className="text-neutral-800 text-lg font-bold">
@@ -319,12 +327,12 @@ const Dashboard = () => {
                       {list.visibility}
                     </Badge>
                   </h1>
-                  <h3 className="text-[11px] text-neutral-500 font-normal py-2">
+                  <h3 className="text-[10px] text-neutral-500 leading-relaxed font-normal py-2">
                     {list.description}
                   </h3>
                   <div className="flex justify-between py-5">
                     <button
-                      className="flex items-center space-x-1 hover:scale-95 transition-all"
+                      className="flex items-center space-x-1 hover:text-neutral-400 transition-all"
                       onClick={() => {
                         navigator.clipboard.writeText(`hit run ${list.name}`);
                         toast({
@@ -351,7 +359,7 @@ const Dashboard = () => {
                     </button>
 
                     <button
-                      className="flex items-center space-x-1 hover:scale-95 transition-all"
+                      className="flex items-center space-x-1 hover:text-neutral-400 transition-all"
                       onClick={() => listAction(list, index)}
                     >
                       <p>
@@ -360,33 +368,17 @@ const Dashboard = () => {
                       <p className="text-xs font-medium">Edit</p>
                     </button>
 
-                    <button className="flex items-center space-x-1 text-red-500 hover:scale-95 transition-all">
+                    <button
+                      className="flex items-center space-x-1 text-red-500 hover:text-neutral-400 transition-all"
+                      onClick={() =>
+                        confirm("Are you sure you want to delete this hit?") &&
+                        DeleteList(index)
+                      }
+                    >
                       <p>
                         <RiDeleteBin5Line size={17} />
                       </p>
-                      <p
-                        className="text-xs font-medium"
-                        onClick={() => {
-                          toast({
-                            position: "top-right",
-                            duration: 2000,
-                            render: () => (
-                              <Box
-                                color="white"
-                                py={3}
-                                px={5}
-                                bg="gray.800"
-                                borderRadius="lg"
-                              >
-                                Double-press to delete!
-                              </Box>
-                            ),
-                          });
-                        }}
-                        onDoubleClick={() => DeleteList(index)}
-                      >
-                        Delete
-                      </p>
+                      <p className="text-xs font-medium">Delete</p>
                     </button>
                   </div>
                 </div>
@@ -432,7 +424,7 @@ const Dashboard = () => {
                 mt={2}
                 fontSize="sm"
                 placeholder={`Hits`}
-                value={Current.list.join(", ")}
+                value={CurrentText}
                 onChange={(e) => editList(e.target.value)}
               />
             ) : (
