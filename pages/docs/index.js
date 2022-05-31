@@ -23,6 +23,10 @@ const DocHome = () => {
           </b>
         </p>
 
+        <p className="text-red-500 text-xs font-medium bg-red-50 border-[1px] border-red-500 py-4 px-5 mt-3 rounded-2xl">
+          IMPORTANT: ON MACOS AND LINUX, YOU NEED TO USE THE SUDO PREFIX.
+        </p>
+
         <div className="flex justify-center mt-7">
           <iframe
             width="560"
