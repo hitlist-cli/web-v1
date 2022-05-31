@@ -148,8 +148,8 @@ const Docs = ({ children, title }) => {
                 mb={3}
               >
                 New: Cloud-local synchronisation and faster list execution are
-                now available! Check it out <Link href="/docs/sync">here</Link>{" "}
-                🎉
+                now available! Check it out{" "}
+                <Link href="/docs/cloud-sync">here</Link> 🎉
               </Box>
 
               {children}
