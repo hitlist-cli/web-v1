@@ -67,7 +67,7 @@ const Docs = ({ children, title }) => {
               <RiMenu3Line size={25} />
             </button>
             <h1 className="text-slate-500 text-sm hidden lg:block font-semibold">
-              v1.0.7
+              v2.0.0
             </h1>
           </Flex>
         </Box>
@@ -85,34 +85,49 @@ const Docs = ({ children, title }) => {
               <Flex w="100%" justifyContent="flex-start" px="2.5rem">
                 <Stack spacing={6}>
                   <Link href="/docs" passHref>
-                    <div className={Page("docs")}>Getting Started</div>
+                    <div className={Page("docs")}>
+                      <span className="mr-2">🚀</span>Getting Started
+                    </div>
                   </Link>
                   <Link href="/docs/installation" passHref>
                     <div className={Page("docs/installation")}>
-                      Installation
+                      <span className="mr-2">✨</span>Installation
                     </div>
                   </Link>
                   <Link href="/docs/authentication" passHref>
                     <div className={Page("docs/authentication")}>
-                      Authentication
+                      <span className="mr-2">🔐</span>Authentication
                     </div>
                   </Link>
                   <Link href="/docs/create-list" passHref>
-                    <div className={Page("docs/create-list")}>Create Lists</div>
+                    <div className={Page("docs/create-list")}>
+                      <span className="mr-2">➕</span>Create Lists
+                    </div>
                   </Link>
                   <Link href="/docs/execute-list" passHref>
                     <div className={Page("docs/execute-list")}>
-                      Execute Lists
+                      <span className="mr-2">🛠</span> Execute Lists
                     </div>
                   </Link>
                   <Link href="/docs/view-list" passHref>
-                    <div className={Page("docs/view-list")}>View Lists</div>
+                    <div className={Page("docs/view-list")}>
+                      <span className="mr-2">🔎</span>View Lists
+                    </div>
                   </Link>
                   <Link href="/docs/delete-list" passHref>
-                    <div className={Page("docs/delete-list")}>Delete Lists</div>
+                    <div className={Page("docs/delete-list")}>
+                      <span className="mr-2">❌</span>Delete Lists
+                    </div>
+                  </Link>
+                  <Link href="/docs/cloud-sync" passHref>
+                    <div className={Page("docs/cloud-sync")}>
+                      <span className="mr-2">☁️</span>Cloud Sync
+                    </div>
                   </Link>
                   <Link href="/docs/extras" passHref>
-                    <div className={Page("docs/extras")}>Extras</div>
+                    <div className={Page("docs/extras")}>
+                      <span className="mr-2">📚</span>Extras{" "}
+                    </div>
                   </Link>
                 </Stack>
               </Flex>
@@ -132,7 +147,9 @@ const Docs = ({ children, title }) => {
                 px={5}
                 mb={3}
               >
-                Offline support will be added in the next release 🎉
+                New: Cloud-local synchronisation and faster list execution are
+                now available! Check it out <Link href="/docs/sync">here</Link>{" "}
+                🎉
               </Box>
 
               {children}
@@ -187,28 +204,49 @@ const Docs = ({ children, title }) => {
           />
           <Stack spacing={5} px={8} mt={10}>
             <Link href="/docs" passHref>
-              <div className={Page("docs")}>Getting Started</div>
+              <div className={Page("docs")}>
+                <span className="mr-2">🚀</span>Getting Started
+              </div>
             </Link>
             <Link href="/docs/installation" passHref>
-              <div className={Page("docs/installation")}>Installation</div>
+              <div className={Page("docs/installation")}>
+                <span className="mr-2">✨</span>Installation
+              </div>
             </Link>
             <Link href="/docs/authentication" passHref>
-              <div className={Page("docs/authentication")}>Authentication</div>
+              <div className={Page("docs/authentication")}>
+                <span className="mr-2">🔐</span>Authentication
+              </div>
             </Link>
             <Link href="/docs/create-list" passHref>
-              <div className={Page("docs/create-list")}>Create Lists</div>
+              <div className={Page("docs/create-list")}>
+                <span className="mr-2">➕</span>Create Lists
+              </div>
             </Link>
             <Link href="/docs/execute-list" passHref>
-              <div className={Page("docs/execute-list")}>Execute Lists</div>
+              <div className={Page("docs/execute-list")}>
+                <span className="mr-2">🛠</span> Execute Lists
+              </div>
             </Link>
             <Link href="/docs/view-list" passHref>
-              <div className={Page("docs/view-list")}>View Lists</div>
+              <div className={Page("docs/view-list")}>
+                <span className="mr-2">🔎</span>View Lists
+              </div>
             </Link>
             <Link href="/docs/delete-list" passHref>
-              <div className={Page("docs/delete-list")}>Delete Lists</div>
+              <div className={Page("docs/delete-list")}>
+                <span className="mr-2">❌</span>Delete Lists
+              </div>
+            </Link>
+            <Link href="/docs/cloud-sync" passHref>
+              <div className={Page("docs/cloud-sync")}>
+                <span className="mr-2">☁️</span>Cloud Sync
+              </div>
             </Link>
             <Link href="/docs/extras" passHref>
-              <div className={Page("docs/extras")}>Extras</div>
+              <div className={Page("docs/extras")}>
+                <span className="mr-2">📚</span>Extras{" "}
+              </div>
             </Link>
           </Stack>
         </DrawerContent>

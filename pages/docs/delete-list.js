@@ -26,8 +26,8 @@ const DeleteLists = () => {
       </Text>
       <Command mt={2}>hit x [LIST NAME]</Command>
 
-      <PageButton next={true} page="extras">
-        Extras 📚
+      <PageButton next={true} page="cloud-sync">
+        Cloud Sync ☁️
       </PageButton>
       <PageButton next={false} page="view-list" mt="5">
         View Lists 🔎

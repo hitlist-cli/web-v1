@@ -18,6 +18,9 @@ const DocHome = () => {
           (i.e Hit Lists) with you anywhere and use them anytime. Hit-List CLI
           tool is built to help you reduce time spent repeating commands in the
           terminal; consequently improving your workflow efficiency.
+          <b className="block mt-2">
+            New: HitList can now save and sync your hits locally from the cloud.
+          </b>
         </p>
 
         <div className="flex justify-center mt-7">

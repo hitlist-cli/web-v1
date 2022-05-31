@@ -28,7 +28,7 @@ const Extras = () => {
       <Text mt={2} fontSize="sm" textAlign="center">
         OR
       </Text>
-      <Command mt={2}>hit git [COMMIT MESSAGE]</Command>
+      <Command mt={2}>hit p [COMMIT MESSAGE]</Command>
 
       <SubHeader mt={8}>Check current version</SubHeader>
       <Description>

@@ -33,7 +33,7 @@ const Command = ({ children, mt }) => {
           {children}
         </Box>
         <Spacer />
-        <Box textColor="gray.400" onClick={copyText}>
+        <Box textColor="gray.400" onClick={copyText} cursor="pointer">
           <IoCopyOutline size={20} />
         </Box>
       </Flex>
