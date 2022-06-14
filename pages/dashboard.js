@@ -51,11 +51,11 @@ const Dashboard = () => {
   });
 
   //If the user is not logged in
-  //   useEffect(() => {
-  //     if (!isAuth()) {
-  //       router.replace("/auth/login");
-  //     }
-  //   }, []);
+  useEffect(() => {
+    if (!isAuth()) {
+      router.replace("/auth/login");
+    }
+  }, [isAuth, router]);
 
   //Get data on page render
   useEffect(() => {
@@ -96,10 +96,10 @@ const Dashboard = () => {
   /**
    * Loading State
    */
-  if (!User || !Token || Status.Loading) {
+  if (!User || !Token || Status.Loading || !Data) {
     return (
       <div className="w-screen h-[90vh] flex flex-col items-center justify-center">
-        <Meta title={`${User.username.toUpperCase()}'s Dashboard`} />
+        <Meta title="Loading..." />
 
         <Spinner size="xl" />
         <p className="text-neutral-400 text-xs mt-8">

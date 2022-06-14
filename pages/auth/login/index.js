@@ -7,6 +7,7 @@ import { AuthContext } from "@/context/AuthContext";
 import { useToast, Spinner } from "@chakra-ui/react";
 import Meta from "@/defaults/Meta";
 import Link from "next/link";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   //FUNCS & CONTEXT
@@ -42,6 +43,10 @@ const Login = () => {
     Loading: false,
     Text: "",
   });
+  const [show, setShow] = useState(false);
+
+  //Handle show
+  const handleShow = () => setShow(!show);
 
   //Form handler
   const formHandler = (Form) => {
@@ -94,7 +99,7 @@ const Login = () => {
               alt="logo"
             />
 
-            <h2 className="mt-8 lg:mt-12 text-center text-3xl font-bold text-neutral-900">
+            <h2 className="mt-8 lg:mt-12 text-center text-3xl lg:text-5xl font-bold text-neutral-900">
               Sign In
             </h2>
             <p className="mt-2 text-center text-xs text-neutral-500 font-normal">
@@ -102,7 +107,7 @@ const Login = () => {
             </p>
           </div>
           <form className="mt-10 lg:mt-12 space-y-6" onSubmit={formHandler}>
-            <div className="rounded-md shadow-sm -space-y-px">
+            <div className="rounded-md">
               <div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
@@ -113,7 +118,7 @@ const Login = () => {
                   type="text"
                   autoComplete="email"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
                   placeholder="Username or eMail address"
                   value={Data.email}
                   onChange={(e) =>
@@ -121,25 +126,37 @@ const Login = () => {
                   }
                 />
               </div>
-              <div>
+              <div className="mt-2">
                 <label htmlFor="password" className="sr-only">
                   Password
                 </label>
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={!show ? "password" : "text"}
                   autoComplete="current-password"
                   required
-                  className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
                   placeholder="Password"
                   value={Data.password}
                   onChange={(e) =>
                     setData({ ...Data, password: e.target.value })
                   }
                 />
+                <div onClick={handleShow} className="cursor-pointer">
+                  {show ? (
+                    <div className="flex items-center justify-end gap-1 text-xs mt-2">
+                      <FaEyeSlash /> Hide
+                    </div>
+                  ) : (
+                    <div className="flex items-center justify-end gap-1 text-xs mt-2 text-blue-400">
+                      <FaEye /> Show
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
+
             <div className="font-medium text-xs text-primary hover:text-primary">
               <Link href="/auth/reset">Forgot your password?</Link>
             </div>

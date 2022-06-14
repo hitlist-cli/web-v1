@@ -20,6 +20,12 @@ const Extras = () => {
       <Description>Clear all terminal output using Hit-List CLI</Description>
       <Command mt={2}>hit c</Command>
 
+      <SubHeader mt={4}>View Docs</SubHeader>
+      <Description>
+        Open this documentation website in your default browser
+      </Description>
+      <Command mt={2}>hit docs</Command>
+
       <SubHeader mt={8}>Pushing to Git</SubHeader>
       <Description>
         Push to a pre-configured git repository with one hit 😎

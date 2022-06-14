@@ -97,7 +97,7 @@ const SignUp = () => {
               alt="Logo"
             />
 
-            <h2 className="mt-8 lg:mt-12 text-center text-3xl font-bold text-neutral-900">
+            <h2 className="mt-8 lg:mt-12 text-center text-3xl lg:text-5xl font-bold text-neutral-900">
               Sign Up
             </h2>
             <p className="mt-2 text-center text-xs text-neutral-500 font-normal">

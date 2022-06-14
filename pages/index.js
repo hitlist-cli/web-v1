@@ -141,7 +141,7 @@ const Home = () => {
             anytime
           </Feature>
           <Feature image="Doc">
-            Easy to use with minimal learning curve or documentation required
+            Open-source codebase and a detailed usage documentation.
           </Feature>
         </div>
       </section>

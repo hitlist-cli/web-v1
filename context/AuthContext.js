@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Cookies from "js-cookie";
 
 const AuthContext = createContext();
 
@@ -15,9 +16,9 @@ const AuthProvider = ({ children }) => {
 
   //Get Token on first render
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const email = localStorage.getItem("email");
-    const username = localStorage.getItem("username");
+    const token = Cookies.get("token");
+    const email = Cookies.get("email");
+    const username = Cookies.get("username");
 
     setToken(token);
     setUser({
@@ -33,9 +34,10 @@ const AuthProvider = ({ children }) => {
       email: email,
       username: username,
     });
-    localStorage.setItem("token", token);
-    localStorage.setItem("email", email);
-    localStorage.setItem("username", username);
+
+    Cookies.set("token", token, { expires: 30 });
+    Cookies.set("email", email, { expires: 30 });
+    Cookies.set("username", username, { expires: 30 });
   };
 
   //Confirm authentication
@@ -50,9 +52,10 @@ const AuthProvider = ({ children }) => {
   //Destroy session
   const destroyAuth = () => {
     setToken("");
-    localStorage.removeItem("token");
-    localStorage.removeItem("email");
-    localStorage.removeItem("username");
+
+    Cookies.remove("token");
+    Cookies.remove("email");
+    Cookies.remove("username");
     router.push("/auth/login");
   };
 
