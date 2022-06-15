@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiMenu3Line } from "react-icons/ri";
-import { FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 const Docs = ({ children, title }) => {
@@ -50,11 +50,11 @@ const Docs = ({ children, title }) => {
           borderBottomColor="#e9e9e9"
         >
           <Flex alignItems="center">
-            <Link href="/docs" passHref>
+            <Link href="/" passHref>
               <img
                 src="/images/Header-Black.svg"
                 alt="Header"
-                className="object-contain max-h-[4vh]"
+                className="object-contain max-h-[4vh] cursor-pointer"
               />
             </Link>
             <Spacer />
@@ -67,7 +67,7 @@ const Docs = ({ children, title }) => {
               <RiMenu3Line size={25} />
             </button>
             <h1 className="text-slate-500 text-sm hidden lg:block font-semibold">
-              v2.0.0
+              v2.1.0
             </h1>
           </Flex>
         </Box>
@@ -147,8 +147,14 @@ const Docs = ({ children, title }) => {
                 px={5}
                 mb={3}
               >
-                New: Cloud synchronization is now available! Check it out{" "}
-                <Link href="/docs/cloud-sync">here</Link> 🎉
+                Update: Hitlist is now open-source and you can contribute{" "}
+                <a
+                  href="https://github.com/hitlist-cli/cli"
+                  className="underline"
+                >
+                  here
+                </a>
+                .
               </Box>
 
               {children}
@@ -173,10 +179,16 @@ const Docs = ({ children, title }) => {
               <Flex w="100%" justifyContent="center">
                 <Stack spacing={5}>
                   <a
-                    className="flex items-center space-x-2 hover:scale-95 transition-all text-sky-500"
+                    className="flex items-center space-x-2 hover:scale-95 transition-all text-sky-500 text-sm"
                     href="https://twitter.com/hitlistcli"
                   >
-                    <FaTwitter /> <div>Twitter</div>
+                    <FaTwitter size={20} /> <div>Twitter</div>
+                  </a>
+                  <a
+                    className="flex items-center space-x-2 hover:scale-95 transition-all text-neutral-700 text-sm"
+                    href="https://github.com/hitlist-cli/cli"
+                  >
+                    <FaGithub size={20} /> <div>GitHub</div>
                   </a>
 
                   <p className="text-[10px] text-slate-500">hit@hitlist.dev</p>

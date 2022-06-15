@@ -27,20 +27,12 @@ const Authentication = () => {
       </Description>
       <Command mt={4}>hit join</Command>
 
-      <SubHeader>Login To An Account (Windows)</SubHeader>
+      <SubHeader>Login To An Account</SubHeader>
       <Description>
         To run online commands; public or owned ones, you need to be be signed
         in to Hit-List CLI. Run the command below to login to your account.
       </Description>
       <Command mt={4}>hit login</Command>
-
-      <SubHeader>Login To An Account (MacOS & Linux)</SubHeader>
-      <Description>
-        Using the Hit-List login command on these operating systems require
-        special permissions just like installation. Use the command below to
-        login to Hit-List CLI on your Mac or Linux computer
-      </Description>
-      <Command mt={4}>sudo hit login</Command>
 
       <SubHeader>Show Authenticated User</SubHeader>
       <Description>
@@ -52,8 +44,6 @@ const Authentication = () => {
       <Description>
         To sign out of Hit-List CLI, run the command below
       </Description>
-      <Command mt={2}>sudo hit logout</Command>
-      <Description>For Windows Users</Description>
       <Command mt={2}>hit logout</Command>
 
       <PageButton next={true} page="create-list">

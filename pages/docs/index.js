@@ -23,10 +23,6 @@ const DocHome = () => {
           </b>
         </p>
 
-        {/* <p className="text-red-500 text-xs font-medium bg-red-50 border-[1px] border-red-500 py-4 px-5 mt-3 rounded-2xl">
-          IMPORTANT: ON MACOS AND LINUX, YOU NEED TO USE THE SUDO PREFIX.
-        </p> */}
-
         <div className="flex justify-center mt-7">
           <iframe
             width="560"
@@ -44,7 +40,7 @@ const DocHome = () => {
             Scenario 1 : You have 5 commands to start up your server/program
             every day, that really does break the DRY (Don&apos;t Repeat
             Yourself) rule. With{" "}
-            <span className="text-primary text-medium">Hit List</span>, you can
+            <span className="text-primary text-medium">Hit-List</span>, you can
             run these commands with just one HIT on any computer.
           </Text>
         </Info>
@@ -54,7 +50,7 @@ const DocHome = () => {
             Scenario 2 : You are a very cautious coder and you commit your work
             very often, but again you have to run 3/4 git commands; tsk, very
             inefficient. This is already baked into{" "}
-            <span className="text-primary text-medium">Hit List</span> and you
+            <span className="text-primary text-medium">Hit-List</span> and you
             can easily run it with just ONE hit.
           </Text>
         </Info>

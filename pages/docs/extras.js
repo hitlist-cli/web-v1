@@ -38,7 +38,8 @@ const Extras = () => {
 
       <SubHeader mt={8}>Check current version</SubHeader>
       <Description>
-        Check the version Hit-List CLI you have installed
+        Check the version Hit-List CLI you have installed and check for newer
+        versions.
       </Description>
       <Command mt={2}>hit -V</Command>
       <Text mt={2} fontSize="sm" textAlign="center">

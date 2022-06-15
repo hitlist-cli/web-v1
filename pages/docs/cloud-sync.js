@@ -24,11 +24,10 @@ const Sync = () => {
         Hits will now try to execute locally first before hitting the cloud. So,
         here is how to get these hits from HitList Cloud and make them
         accessible on your machine. It is as easy as running the command below.
-        On MacOS and Linux, you would need to use the `sudo` prefix.
       </Description>
       <Command mt={4}>hit sync</Command>
 
-      <div className="mt-4 font-normal text-xs">
+      <div className="mt-4 font-medium text-slate-600 text-xs px-2">
         Well, that is all for now! Happy hacking 😎
       </div>
 

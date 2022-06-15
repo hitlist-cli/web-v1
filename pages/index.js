@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Meta from "@/defaults/Meta";
 import Typed from "typed.js";
 import { gsap } from "gsap";
-import { FaTwitter } from "react-icons/fa";
+import { FaGithub, FaTwitter } from "react-icons/fa";
 import Feature from "@/components/web/Feature";
 
 const Home = () => {
@@ -13,6 +13,8 @@ const Home = () => {
   const Two = useRef();
   const resOne = useRef();
   const resTwo = useRef();
+
+  const currentDate = new Date();
 
   useEffect(() => {
     const typedOne = new Typed(One.current, {
@@ -130,18 +132,18 @@ const Home = () => {
 
         <div className="w-[95%] lg:w-full mx-auto pt-16 pb-24 bg-transparent grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-5">
           <Feature image="Share">
-            Share your commands with anyone easily and quickly
+            Share your commands with anyone easily and quickly.
           </Feature>
           <Feature image="Hit">
             Make your workflow faster and cleaner by running multiple commands
-            with one Hit
+            with one <b>hit</b>
           </Feature>
           <Feature image="Cloud">
-            Keep your lists safely in the cloud and use them anywhere and
-            anytime
+            Keep your lists safely in the cloud and use them anytime even
+            without an internet connection.
           </Feature>
           <Feature image="Doc">
-            Open-source codebase and a detailed usage documentation.
+            Open-source codebase and a detailed usage documentation for users.
           </Feature>
         </div>
       </section>
@@ -154,18 +156,29 @@ const Home = () => {
               className="object-contain h-6 lg:h-8"
             />
             <h4 className="lg:text-[11px] text-[10px] font-normal">
-              Your Online Commands Manager
+              &copy;{currentDate.getFullYear()}. Your Online Commands Manager
             </h4>
           </div>
 
-          <div className="bg-primary text-white p-2 rounded-full">
-            <a
-              href="https://twitter.com/hitlistcli"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter size={15} />
-            </a>
+          <div className="flex gap-2 lg:gap-3">
+            <div className="bg-primary text-white p-2 rounded-full">
+              <a
+                href="https://twitter.com/hitlistcli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaTwitter size={15} />
+              </a>
+            </div>
+            <div className="bg-neutral-700 text-white p-2 rounded-full">
+              <a
+                href="https://github.com/hitlist-cli/cli"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={15} />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
