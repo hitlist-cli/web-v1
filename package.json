@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 7500",
-    "tailwind": "npx tailwind -i ./styles/main.css -o ./styles/globals.css --watch",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
