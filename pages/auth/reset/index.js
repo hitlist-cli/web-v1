@@ -1,16 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Meta from "@/defaults/Meta";
-import {
-  Button,
-  Spinner,
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  Input,
-  Divider,
-  useToast,
-} from "@chakra-ui/react";
+import { Button, Alert, AlertIcon, AlertDescription, Input, Divider, useToast } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -52,9 +42,7 @@ const Reset = () => {
           ...Status,
           Loading: false,
           Error: true,
-          Text: error.response.data.message
-            ? error.response.data.message
-            : "Something went wrong",
+          Text: error.response.data.message ? error.response.data.message : "Something went wrong",
         });
       });
   };
@@ -75,8 +63,7 @@ const Reset = () => {
       .then((response) => {
         toast({
           title: "Success!",
-          description:
-            "Your password has been changed successfully, redirecting you to sign in...",
+          description: "Your password has been changed successfully, redirecting you to sign in...",
           status: "success",
           duration: 2000,
           isClosable: true,
@@ -91,9 +78,7 @@ const Reset = () => {
       .catch((error) => {
         toast({
           title: "Error!",
-          description: error.response.data.message
-            ? error.response.data.message
-            : "Something went wrong",
+          description: error.response.data.message ? error.response.data.message : "Something went wrong",
           status: "error",
           duration: 3000,
           isClosable: true,
@@ -111,47 +96,20 @@ const Reset = () => {
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 lg:h-16 w-auto "
-              src="/images/Logo-Black.svg"
-              alt="Logo"
-            />
-
-            <h2 className="mt-8 lg:mt-12 text-center text-3xl font-bold text-neutral-900">
-              Reset Password
-            </h2>
-            <p className="mt-2 text-center text-xs text-neutral-500 font-normal">
-              You forgot your password? Tsk.
-            </p>
+            <h2 className="mt-8 lg:mt-12 text-center text-3xl font-bold text-neutral-900">Reset Password</h2>
           </div>
 
           <div className="mt-10 lg:mt-12 rounded-md shadow-sm space-y-3">
             {Status.Error && (
-              <Alert
-                status="error"
-                rounded="xl"
-                fontSize="sm"
-                py={4}
-                mt={2}
-                mb={5}
-              >
+              <Alert status="error" rounded="xl" fontSize="sm" py={4} mt={2} mb={5}>
                 <AlertIcon />
                 <AlertDescription>{Status.Text}</AlertDescription>
               </Alert>
             )}
             {Status.Success && (
-              <Alert
-                status="success"
-                rounded="xl"
-                fontSize="sm"
-                py={4}
-                mt={2}
-                mb={5}
-              >
+              <Alert status="success" rounded="xl" fontSize="sm" py={4} mt={2} mb={5}>
                 <AlertIcon />
-                <AlertDescription>
-                  A new password has been sent to the provided email address.
-                </AlertDescription>
+                <AlertDescription>A new password has been sent to the provided email address.</AlertDescription>
               </Alert>
             )}
             <div>
@@ -172,9 +130,7 @@ const Reset = () => {
 
             {Status.Success && (
               <div className="mt-4">
-                <h1 className="font-semibold text-slate-300 py-2">
-                  Change Password
-                </h1>
+                <h1 className="font-semibold text-slate-300 py-2">Change Password</h1>
                 <Divider />
                 <Input
                   type="password"
@@ -182,9 +138,7 @@ const Reset = () => {
                   placeholder="Current Password"
                   mt={3}
                   value={Data.currentPassword}
-                  onChange={(e) =>
-                    setData({ ...Data, currentPassword: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, currentPassword: e.target.value })}
                 />
                 <Input
                   type="password"
@@ -192,9 +146,7 @@ const Reset = () => {
                   placeholder="New Password"
                   mt={3}
                   value={Data.newPassword}
-                  onChange={(e) =>
-                    setData({ ...Data, newPassword: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, newPassword: e.target.value })}
                 />
                 <Input
                   type="password"
@@ -202,34 +154,18 @@ const Reset = () => {
                   placeholder="Confirm Password"
                   mt={3}
                   value={Data.confirmPassword}
-                  onChange={(e) =>
-                    setData({ ...Data, confirmPassword: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, confirmPassword: e.target.value })}
                 />
               </div>
             )}
           </div>
           <div>
             {Status.Success ? (
-              <Button
-                fontSize="sm"
-                width="100%"
-                colorScheme="blue"
-                type="submit"
-                isLoading={Status.Loading}
-                onClick={resetHandler}
-              >
+              <Button fontSize="sm" width="100%" colorScheme="blackAlpha" type="submit" isLoading={Status.Loading} onClick={resetHandler}>
                 Update
               </Button>
             ) : (
-              <Button
-                fontSize="sm"
-                width="100%"
-                colorScheme="blue"
-                type="submit"
-                onClick={formHandler}
-                isLoading={Status.Loading}
-              >
+              <Button fontSize="sm" width="100%" colorScheme="blackAlpha" type="submit" onClick={formHandler} isLoading={Status.Loading}>
                 Request New Password
               </Button>
             )}

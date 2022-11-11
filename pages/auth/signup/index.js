@@ -9,12 +9,10 @@ import Meta from "@/defaults/Meta";
 import Link from "next/link";
 
 const SignUp = () => {
-  //FUNCS & CONTEXT
   const toast = useToast();
   const { Auth, isAuth } = useContext(AuthContext);
   const router = useRouter();
 
-  //if user is logged in
   useEffect(() => {
     if (isAuth()) {
       toast({
@@ -89,23 +87,12 @@ const SignUp = () => {
     <>
       <Meta title="Sign Up" />
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8">
+        <div className="max-w-md w-full space-y-8 px-3">
           <div>
-            <img
-              className="mx-auto h-12 lg:h-16 w-auto "
-              src="/images/Logo-Black.svg"
-              alt="Logo"
-            />
-
-            <h2 className="mt-8 lg:mt-12 text-center text-3xl lg:text-5xl font-bold text-neutral-900">
-              Sign Up
-            </h2>
-            <p className="mt-2 text-center text-xs text-neutral-500 font-normal">
-              Sign up to start using Hit-List CLI
-            </p>
+            <h2 className="mt-8 lg:mt-12 text-center text-4xl lg:text-5xl font-bold text-neutral-900">Sign Up</h2>
           </div>
           <form className="mt-10 lg:mt-12 space-y-6" onSubmit={formHandler}>
-            <div className="rounded-md shadow-sm space-y-3">
+            <div className="rounded-xl shadow-sm space-y-3">
               <div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
@@ -115,12 +102,10 @@ const SignUp = () => {
                   name="email"
                   type="email"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-xl focus:outline-none focus:ring-neutral-900 focus:border-neutral-900 focus:z-10 sm:text-xs"
                   placeholder="Email address"
                   value={Data.email}
-                  onChange={(e) =>
-                    setData({ ...Data, email: e.target.value.toLowerCase() })
-                  }
+                  onChange={(e) => setData({ ...Data, email: e.target.value.toLowerCase() })}
                 />
               </div>
               <div>
@@ -132,12 +117,10 @@ const SignUp = () => {
                   name="username"
                   type="text"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-xl focus:outline-none focus:ring-neutral-900 focus:border-neutral-900 focus:z-10 sm:text-xs"
                   placeholder="Username"
                   value={Data.username}
-                  onChange={(e) =>
-                    setData({ ...Data, username: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, username: e.target.value })}
                 />
               </div>
 
@@ -150,12 +133,10 @@ const SignUp = () => {
                   name="password"
                   type="password"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-xl focus:outline-none focus:ring-neutral-900 focus:border-neutral-900 focus:z-10 sm:text-xs"
                   placeholder="Password"
                   value={Data.password}
-                  onChange={(e) =>
-                    setData({ ...Data, password: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, password: e.target.value })}
                 />
               </div>
 
@@ -168,12 +149,10 @@ const SignUp = () => {
                   name="confirm-password"
                   type="password"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                  className="appearance-none relative block w-full px-3 py-4 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-xl focus:outline-none focus:ring-neutral-900 focus:border-neutral-900 focus:z-10 sm:text-xs"
                   placeholder="Confirm Password"
                   value={Data.confirmPassword}
-                  onChange={(e) =>
-                    setData({ ...Data, confirmPassword: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, confirmPassword: e.target.value })}
                 />
               </div>
             </div>
@@ -181,13 +160,13 @@ const SignUp = () => {
             <div>
               <button
                 type="submit"
-                className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary hover:scale-95 transition-all"
+                className="group relative w-full flex justify-center py-4 px-4 border border-transparent text-xs font-medium rounded-xl text-white bg-neutral-900 hover:bg-neutral-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 hover:scale-95 transition-all"
               >
                 {Status.Loading ? <Spinner size="md" /> : "Sign up"}
               </button>
             </div>
 
-            <div className="text-sm text-center font-medium text-primary hover:text-primary">
+            <div className="text-xs text-center font-medium text-neutral-900 hover:text-neutral-900">
               <Link href="/auth/login">Sign in to your account</Link>
             </div>
           </form>
