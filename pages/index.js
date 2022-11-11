@@ -59,10 +59,10 @@ const Home = () => {
       </nav>
 
       <section className="w-[95%] md:w-[85%] lg:w-4/6 2xl:w-3/5 mx-auto pt-[15vh] lg:pt-[20vh]">
-        <div className="w-full mx-auto text-center text-[2rem] lg:text-6xl leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
+        <div className="w-full mx-auto text-center text-[2rem] lg:text-6xl text-neutral-800 lg:font-semibold font-black">
           Your <span className="text-primary font-semibold">online</span>
         </div>
-        <div className="w-[95%] mx-auto text-center text-[1.9rem] lg:text-[3.6rem] leading-normal lg:leading-relaxed text-neutral-800 lg:font-semibold font-bold">
+        <div className="w-[95%] mx-auto text-center text-[1.9rem] lg:text-[3.6rem] text-neutral-800 lg:font-semibold font-black">
           commands manager
         </div>
         <h4 className="w-full mx-auto text-[12px] lg:text-sm font-medium text-center text-neutral-500 mt-[2vh] lg:mt-[3vh] px-3">
@@ -70,7 +70,6 @@ const Home = () => {
           accessible to anybody, and use them to work faster and smarter on any computer.
         </h4>
 
-        {/* DOCS BUTTON */}
         <div className="lg:w-3/5 mx-auto flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6 items-center justify-center pt-16 pb-6">
           <button
             className="w-[90%] lg:w-full py-4 px-10 text-white text-sm bg-primary rounded-lg hover:scale-95 transition-all"

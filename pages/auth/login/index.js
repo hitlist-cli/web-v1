@@ -93,18 +93,9 @@ const Login = () => {
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <img
-              className="mx-auto h-12 lg:h-16 w-auto "
-              src="/images/Logo-Black.svg"
-              alt="logo"
-            />
+            <img className="mx-auto h-12 lg:h-16 w-auto " src="/images/Logo-Black.svg" alt="logo" />
 
-            <h2 className="mt-8 lg:mt-12 text-center text-3xl lg:text-5xl font-bold text-neutral-900">
-              Sign In
-            </h2>
-            <p className="mt-2 text-center text-xs text-neutral-500 font-normal">
-              Sign in to your account to continue
-            </p>
+            <h2 className="mt-8 lg:mt-12 text-center text-3xl lg:text-5xl font-bold text-neutral-900">Sign In</h2>
           </div>
           <form className="mt-10 lg:mt-12 space-y-6" onSubmit={formHandler}>
             <div className="rounded-md">
@@ -121,9 +112,7 @@ const Login = () => {
                   className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
                   placeholder="Username or eMail address"
                   value={Data.email}
-                  onChange={(e) =>
-                    setData({ ...Data, email: e.target.value.toLowerCase() })
-                  }
+                  onChange={(e) => setData({ ...Data, email: e.target.value.toLowerCase() })}
                 />
               </div>
               <div className="mt-2">
@@ -139,9 +128,7 @@ const Login = () => {
                   className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
                   placeholder="Password"
                   value={Data.password}
-                  onChange={(e) =>
-                    setData({ ...Data, password: e.target.value })
-                  }
+                  onChange={(e) => setData({ ...Data, password: e.target.value })}
                 />
                 <div onClick={handleShow} className="cursor-pointer">
                   {show ? (
