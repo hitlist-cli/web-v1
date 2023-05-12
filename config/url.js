@@ -1,1 +1,1 @@
-export const url = "https://hitlist-api-v1.cr.thio.cloud/v1";
+export const url = "https://hitlist-api.thio.cloud/v1";
